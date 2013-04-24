@@ -5,6 +5,9 @@
 <html ng-app="myApp" ng-controller="CardController">
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
+<script>
+    var cardID = 66;
+</script>
     <!--link href="/Content/themes/base/minified/jquery-ui.min.css" rel="stylesheet" /-->
     <link href="/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="/Content/bootstrap-responsive.min.css" rel="stylesheet" />
@@ -22,8 +25,8 @@
 </head>
 
 <body class="{{Loading}}">
-    <div id="main" style="background-image: url(/Content/images/detail-bg1.png); width: 730px; height: 462px; margin-top: 53px; background-repeat: no-repeat; padding-left: 65px; padding-top: 60px;" ng-show="card.Name">
-        <div style="float: left;">
+    <div id="main" class="cardSkinWrapper" ng-show="card.Name">
+        <div class="cardQuickGlanceWrapper">
             <img ng-src="{{card.ImageURL}}" />
             <div style="background: none repeat scroll 0 0 transparent; border: 0 none; font-size: 15px; margin: 0; outline: 0 none; padding: 0; vertical-align: baseline;">
                 Rarity
@@ -31,14 +34,14 @@
             </div>
         </div>
 
-        <div style="float: left; padding-left: 15px;">
+        <div class="cardDeatilsWrapper">
             <h4>{{card.Name}}
             </h4>
             <p class="textnew1">
                 ILLUSTRATOR : {{card.Illustrator}}
             </p>
 
-            <div style="margin-top: 10px; margin-left: 50px; float: left; text-align: center;">
+            <div class="cardStatWrapper">
                 <div style="width: 420px; clear: both;">
                     <div title="{{ToolTips.HP}}" class="statsheader repeaterSprite repeaterSprite-{{card.Sphere}}">
                         HP
@@ -72,7 +75,7 @@
                     <div title="{{ToolTips.AGI}}" class="statsvalue">
                         {{card.BaseStats.AGI}}
                     </div>
-                    <div tooltip="{{ToolTips.RNG}}" title="Range determins how many columns a unit's attack can reach. Only occcupied columns count against range." class="statsvalue">
+                    <div tooltip="{{ToolTips.RNG}}" class="statsvalue">
                         {{card.BaseStats.RNG}}
                     </div>
                     <div title="{{ToolTips.LP}}" class="statsvalue">
@@ -95,12 +98,12 @@
             </div>
             <div ng-repeat="skill in Skills" style="padding-top: 20px;">
                 <div ng-show="skill">
-                    <div class="cardSprite cardSprite-Skill-{{card.Sphere}}" style="clear: both; padding-top: 3px; padding-left: 5px;">
+                    <div class="paddedTop cardSprite cardSprite-Skill-{{card.Sphere}}" style="clear: both; padding-left: 5px;">
                         <div style="float: left; vertical-align: middle; font-size: 14px; color: #FFFFFF; font-family: Times New Roman; text-transform: uppercase; padding-left: 2px; padding-top: 2px;">
                             {{skill.Name}}           
                         </div>
-                        <div style="float: right;">
-                            <div title="{{getSkillTip(skill.Type)}}" class="cardSprite cardSprite-Skill-{{skill.Type}}" style="float: left;"></div>
+                        <div class="paddedTop skillBoxRightCap">
+                            <div class="paddedTop" title="{{getSkillTip(skill.Type)}}" class="cardSprite cardSprite-Skill-{{skill.Type}}" style="float: left;"></div>
                             <div ui-jq="popover" data-original-title="{{ToolTips.SP}}" ui-jq="tooltip" style="background-color: black; float: left; height: 19px; margin-right: 6px;color:white;">
                                 <img src="/Content/images/sp.gif" alt="icn" />
                                 SP<span style="font-family: Helvetica; font-weight: bold;">{{skill.SP}}
@@ -109,7 +112,7 @@
 
                         </div>
                     </div>
-                    <div style="width: 387px; font-family: 'helvetica'; font-size: 12px; margin-left: 7px; font-weight: bold;">
+                    <div class="cardSkillComment">
                         {{skill.Comment}}
                     </div>
                     <script>
@@ -119,7 +122,7 @@
             </div>
         </div>
     </div>
-    {{loadCard(66)}}
+    
     <div class="modal"></div>
     <script>
         

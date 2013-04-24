@@ -1,11 +1,78 @@
-﻿h4 {
-color: #000000;
-font-family: times new roman;
-font-size: 17px;
-margin: 0 0 0 0px;
-font-weight: normal;
-text-transform: uppercase;
+﻿h4
+{
+    color: #000000;
+    font-family: times new roman;
+    font-size: 17px;
+    margin: 0 0 0 0px;
+    font-weight: normal;
+    text-transform: uppercase;
 }
+
+.paddedTop
+{
+    padding-top: 1px;
+}
+
+.skillBoxRightCap
+{
+    float: right;
+    padding-right: 3px;
+}
+
+/*
+    Overall wrapper around entire card data. In this case, it shows a scroll
+    */
+.cardSkinWrapper
+{
+    background-image: url(/Content/images/detail-bg1.png);
+    width: 730px;
+    height: 462px;
+    margin-top: 53px;
+    background-repeat: no-repeat;
+    padding-left: 65px;
+    padding-top: 60px;
+}
+
+/*
+    Overall wrapper for the card's detailed stats
+    */
+.cardDeatilsWrapper
+{
+    float: left;
+    padding-left: 15px;
+}
+
+/*
+    Wraps the grid that contains the card's basestats
+    */
+.cardStatWrapper
+{
+    margin-top: 10px;
+    margin-left: 50px;
+    float: left;
+    text-align: center;
+}
+
+/*
+    Comment text of an individual skill
+    */
+.cardSkillComment
+{
+    width: 387px;
+    font-family: 'helvetica';
+    font-size: 12px;
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+/*
+    Shows high level information that can be seen at a quick glance, such as rarity and a picture
+    */
+.cardQuickGlanceWrapper
+{
+    float: left;
+}
+
 .textnew1
 {
     background: none repeat scroll 0 0 transparent;
@@ -19,190 +86,222 @@ text-transform: uppercase;
 }
 
 
-.sphereBigText {
+.sphereBigText
+{
     font-family: "Times New Roman",Times,serif;
     text-align: center;
     font-size: 40px;
     line-height: 44px;
 }
 
-.sphereSmallText {
+.sphereSmallText
+{
     text-align: center;
     font-size: 11px;
     line-height: 0px;
     font-weight: bold;
 }
 
-.statsheader {
+.statsheader
+{
     border-right: 1px inset black;
     float: left;
-    width:55px;
+    width: 55px;
 }
 
-.statsvalue {
+.statsvalue
+{
     border-right: 1px inset black;
     float: left;
-    width:55px;
-    background-color:white;
+    width: 55px;
+    background-color: white;
 }
 /**********
     Image Sprites
     ******/
 
-.cardSprite {
+.cardSprite
+{
     background: url(/Content/images/CardSpriteSheet.png) no-repeat;
     display: block;
 }
 
-.cardSprite-star {
+.cardSprite-star
+{
     width: 29px;
     height: 30px;
     background-position: -5px -5px;
 }
 
-.cardSprite-Skill-yellow {
+.cardSprite-Skill-yellow
+{
     width: 387px;
     height: 24px;
     background-position: -5px -45px;
 }
 
-.cardSprite-Skill-Auto {
+.cardSprite-Skill-Auto
+{
     width: 69px;
     height: 18px;
     background-position: -44px -5px;
 }
 
-.cardSprite-Skill-Close {
+.cardSprite-Skill-Close
+{
     width: 69px;
     height: 18px;
     background-position: -123px -5px;
 }
 
-.cardSprite-Skill-Gowen {
+.cardSprite-Skill-Gowen
+{
     width: 387px;
     height: 24px;
-    background-position: -5px -79px;    
+    background-position: -5px -79px;
 }
 
-.cardSprite-Skill-purple {
+.cardSprite-Skill-purple
+{
     width: 387px;
     height: 24px;
     background-position: -5px -113px;
 }
 
-.cardSprite-Skill-Action {
+.cardSprite-Skill-Action
+{
     width: 69px;
     height: 18px;
     background-position: -202px -5px;
 }
 
-.cardSprite-list-t1 {
+.cardSprite-list-t1
+{
     width: 387px;
     height: 24px;
     background-position: -5px -147px;
 }
 
-.cardSprite-table-bg1-Gowen {
+.cardSprite-table-bg1-Gowen
+{
     width: 12px;
     height: 18px;
     background-position: -281px -5px;
     background-repeat: repeat-x;
 }
 
-.cardSprite-Skill-Open {
+.cardSprite-Skill-Open
+{
     width: 69px;
     height: 18px;
     background-position: -303px -5px;
 }
 
-.cardSprite-numberSphere-Gowen {
+.cardSprite-numberSphere-Gowen
+{
     width: 65px;
     height: 64px;
     background-position: -5px -181px;
 }
 
-.cardSprite-number-bg {
+.cardSprite-number-bg
+{
     width: 65px;
     height: 65px;
     background-position: -80px -181px;
 }
 
-.cardSprite-number-bg-purple {
+.cardSprite-number-bg-purple
+{
     width: 66px;
     height: 65px;
     background-position: -155px -181px;
 }
 
-.cardSprite-number-bg-yellow {
+.cardSprite-number-bg-yellow
+{
     width: 66px;
     height: 65px;
     background-position: -231px -181px;
 }
 
-.cardSprite-Skill-Rank {
+.cardSprite-Skill-Rank
+{
     width: 69px;
     height: 18px;
     background-position: -307px -181px;
 }
 
-.cardSprite-soul {
+.cardSprite-soul
+{
     width: 69px;
     height: 18px;
     background-position: -307px -209px;
 }
 
-.cardSprite-Skill-Start {
+.cardSprite-Skill-Start
+{
     width: 69px;
     height: 18px;
     background-position: -307px -237px;
 }
 
-.cardSprite-table-bg1 {
+.cardSprite-table-bg1
+{
     width: 12px;
     height: 18px;
     background-position: -5px -265px;
 }
 
-.cardSprite-table-bg1-purple {
+.cardSprite-table-bg1-purple
+{
     width: 12px;
     height: 18px;
     background-position: -27px -265px;
 }
 
-.cardSprite-table-bg1-yellow {
+.cardSprite-table-bg1-yellow
+{
     width: 12px;
     height: 18px;
     background-position: -49px -265px;
 }
 
-.cardSprite-Skill-Trait {
+.cardSprite-Skill-Trait
+{
     width: 69px;
     height: 18px;
     background-position: -71px -265px;
 }
-.repeaterSprite {
+
+.repeaterSprite
+{
     background: url(/Content/Images/RepeaterSprite.png) repeat-x;
     display: block;
 }
 
-.repeaterSprite-table-bg1 {
+.repeaterSprite-table-bg1
+{
     width: 12px;
     height: 18px;
     background-position: -0px -0px;
 }
 
-.repeaterSprite-table-bg1-purple {
+.repeaterSprite-table-bg1-purple
+{
     width: 12px;
     height: 18px;
     background-position: -0px -18px;
 }
 
-.repeaterSprite-Gowen {    
+.repeaterSprite-Gowen
+{
     height: 18px;
-    background-position: -0px -36px;    
+    background-position: -0px -36px;
 }
 
-.repeaterSprite-table-bg1-yellow {
+.repeaterSprite-table-bg1-yellow
+{
     width: 12px;
     height: 18px;
     background-position: -0px -54px;
@@ -213,28 +312,28 @@ text-transform: uppercase;
    with position:fixed. Width, height, top and left speak
    speak for themselves. Background we set to 80% white with
    our animation centered, and no-repeating */
-.modal {
-    display:    none;
-    position:   fixed;
-    z-index:    1000;
-    top:        0;
-    left:       0;
-    height:     100%;
-    width:      100%;
-    background: rgba( 255, 255, 255, .8 ) 
-                url('http://i.stack.imgur.com/FhHRx.gif') 
-                50% 50% 
-                no-repeat;
+.modal
+{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
 }
 
 /* When the body has the loading class, we turn
    the scrollbar off with overflow:hidden */
-body.loading {
-    overflow: hidden;   
+body.loading
+{
+    overflow: hidden;
 }
 
-/* Anytime the body has the loading class, our
+    /* Anytime the body has the loading class, our
    modal element will be visible */
-body.loading .modal {
-    display: block;
-}
+    body.loading .modal
+    {
+        display: block;
+    }
