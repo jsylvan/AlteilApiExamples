@@ -20,7 +20,7 @@ CardController = function ($scope, $resource) {
         Unit: 'A unit card is summoned to the field like a unit in a unit tactics game.',
         Character: 'A unique type of unit card. Multiple copies cannot be in play at one time, on either side of the field.',
         Start: 'Start Skills happen at the beginning of the turn, before any cards take their actions.',
-        Open: 'Open Skills take effect instantly, when the card is first revealed. All Grimoires have Open Skills, and some units.',
+        Open: 'Open Skills take effect instantly, when the card is first revealed. All Grimoires have Open Skills, as do some units.',
         Auto: 'Auto Skills automatically trigger on the unit\'s turn, right before the Action Menu appears.',
         Action: 'These skills appear on the unit\'s Action menu, along with the default skills: Attack, Standby and Move.',
         Counter: 'Counter Skills are triggered as a counter attack whenever the unit takes damage, but is not killed.',
@@ -66,9 +66,13 @@ CardController = function ($scope, $resource) {
         Ork: 'Huge, uncontrollable pig-like humanoids that do nothing but eat everything in their path',
         Pirate: 'Rogues of the high seas, proficient in robbery, dirty tricks and close-quarters combat',
         MartialArtist: 'Fighters who excel in personal combat, either unarmed or using weapons that serve as extensions of their limbs, like the staff',
-        Rarity: 'Stars represent a card\'s rarity. More stars indicate a larger rarity. '
+        Rarity: 'Stars represent a card\'s rarity. More stars indicate a larger rarity, with a maxiumum value of five stars. EX cards are their own set and do not have  a rarity.',
+        Refess: 'Refess is the power of sun and birth. Refess is known for toughness and healing. Its adherents supports each other, leading to unstoppable teamwork. They perfer long term advantage over temporary gain.',
+        Gowen: 'Gowen is the power of fire and earth. Gowen\'s troops hit hard, fast and explosively. Some rank up to improve their abilities on the fly and are both powerful and efficent combatants in any direct confrontation.'
+    
     };
-    $scope.Activity = $resource('http://api.apocoplay.com/AlteilService.svc/GetCardById/:cardID', {
+    
+    $scope.CardSource = $resource('http://api.apocoplay.com/AlteilService.svc/GetCardById/:cardID', {
         get: {
             method: 'JSONP',
         },
@@ -77,29 +81,34 @@ CardController = function ($scope, $resource) {
     $scope.loadCard = function (id) {
         me = this;
         this.Loading = "loading";
-        this.card = this.Activity.get({
+        this.card = this.CardSource.get({
             cardID: id
-        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); });
+        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); me.Rarity = $scope.getRarityEnumerator(); });
 
     };
 
-    $scope.fetch = function () {
-        me = this;
-        this.Loading = "loading";
-        this.card = this.Activity.get({
-            cardID: 62
-        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); });
 
-    };
+    $scope.getRarityEnumerator = function () {        
+        var starCount = this.card.CardSetRarity.split("★").length - 1;
+        var rarityArray = [];
+        for (var i = 0; i < starCount; i++) {
+            rarityArray.push("★");
+        }        
+        return rarityArray;
+    }; 
+    
     $scope.getSkills = function () {
 
         if (!this.card) {
             return;
         }
-        return [this.card.Skills.Skill0,
+        return [
+            this.card.Skills.Skill0,
           this.card.Skills.Skill1,
           this.card.Skills.Skill2,
-          this.card.Skills.Skill3];
+          this.card.Skills.Skill3,
+          this.card.Skills.Soul,
+          ];
     };
 
     $scope.getCardTypeTip = function (cardType) {
@@ -112,39 +121,12 @@ CardController = function ($scope, $resource) {
         return $scope.ToolTips.Character;
     }
 
-    $scope.geToolTip = function (skill) {
-        return $scope.ToolTips[skill.replace(/\s+/g, '')];
-    }
-
-    $scope.getAllegianceTip = function (skill) {
-        if (skill === 'Start')
-            return $scope.ToolTips.start;
-
-        if (skill === 'Open')
-            return $scope.ToolTips.open;
-
-        if (skill === 'Auto')
-            return $scope.ToolTips.auto;
-
-        if (skill === 'Action')
-            return $scope.ToolTips.action;
-
-        if (skill === 'Counter')
-            return $scope.ToolTips.counter;
-
-        if (skill === 'Close')
-            return $scope.ToolTips.close;
-
-        if (skill === 'Soul')
-            return $scope.ToolTips.soul;
-
-        return skill;
-    }
-
-    $scope.toolTip = function (tip) {
-        alert(tip);
-        return { title: tip };
-    };
+    $scope.getToolTip = function (skill) {
+        if (skill != null) {
+            return $scope.ToolTips[skill.replace(/\s+/g, '')];
+        }
+        return "";
+    }       
 
     $scope.loadCard(getQueryVariable("id"));
 };
