@@ -20,6 +20,23 @@
     padding-top:2px;
 }
 
+.notActive
+{
+    /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+
+  /* Netscape */
+  -moz-opacity: 0.5;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.5;
+
+  /* Good browsers */
+  opacity: 0.5;
+}
 /*
     Overall wrapper around entire card data. In this case, it shows a scroll
     */
@@ -168,7 +185,7 @@
     background-position: -5px -5px;
 }
 
-.cardSprite-Skill-yellow
+.cardSprite-Skill-Refess
 {
     width: 387px;
     height: 24px;
@@ -196,7 +213,7 @@
     background-position: -5px -79px;
 }
 
-.cardSprite-Skill-purple
+.cardSprite-Skill-Lawtia
 {
     width: 387px;
     height: 24px;
@@ -210,7 +227,7 @@
     background-position: -202px -5px;
 }
 
-.cardSprite-list-t1
+.cardSprite-Skill-Falkow
 {
     width: 387px;
     height: 24px;
@@ -239,21 +256,21 @@
     background-position: -5px -181px;
 }
 
-.cardSprite-number-bg
+.cardSprite-numberSphere-Falkow
 {
     width: 65px;
     height: 65px;
     background-position: -80px -181px;
 }
 
-.cardSprite-number-bg-purple
+.cardSprite-numberSphere-Lawtia
 {
     width: 66px;
     height: 65px;
     background-position: -155px -181px;
 }
 
-.cardSprite-number-bg-yellow
+.cardSprite-numberSphere-Refess
 {
     width: 66px;
     height: 65px;
@@ -267,7 +284,7 @@
     background-position: -307px -181px;
 }
 
-.cardSprite-soul
+.cardSprite-Skill-Soul
 {
     width: 69px;
     height: 18px;
@@ -281,21 +298,21 @@
     background-position: -307px -237px;
 }
 
-.cardSprite-table-bg1
+.cardSprite-table-bg1-Falkow
 {
     width: 12px;
     height: 18px;
     background-position: -5px -265px;
 }
 
-.cardSprite-table-bg1-purple
+.cardSprite-table-bg1-Lawtia
 {
     width: 12px;
     height: 18px;
     background-position: -27px -265px;
 }
 
-.cardSprite-table-bg1-yellow
+.cardSprite-table-bg1-Refess
 {
     width: 12px;
     height: 18px;
@@ -335,7 +352,7 @@
     background-position: -0px -36px;
 }
 
-.repeaterSprite-table-bg1-yellow
+.repeaterSprite-Refess
 {
     width: 12px;
     height: 18px;
