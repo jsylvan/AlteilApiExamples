@@ -5,9 +5,9 @@
 <html ng-app="myApp" ng-controller="CardController">
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
-<script>
-    var cardID = 66;
-</script>
+    <script>
+        var cardID = 66;
+    </script>
     <!--link href="/Content/themes/base/minified/jquery-ui.min.css" rel="stylesheet" /-->
     <link href="/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="/Content/bootstrap-responsive.min.css" rel="stylesheet" />
@@ -18,7 +18,6 @@
     <script src="/Scripts/angular-resource.js"></script>
     <script src="/Scripts/angular-ui.js"></script>
     <script src="/Scripts/bootstrap.min.js"></script>
-    <!--script src="/Scripts/jquery-ui-1.10.2.js"></script-->
     <script src="/Scripts/Card/CardApp.js"></script>
 
     <title>Alteil Card Details: {{card.Name}}</title>
@@ -27,22 +26,27 @@
 <body class="{{Loading}}">
     <div id="main" class="cardSkinWrapper" ng-show="card.Name">
         <div class="cardQuickGlanceWrapper">
-            <img ng-src="{{card.ImageURL}}" />
-            <div style="background: none repeat scroll 0 0 transparent; border: 0 none; font-size: 15px; margin: 0; outline: 0 none; padding: 0; vertical-align: baseline;">
-                Rarity
+            <img ng-src="{{card.ImageURL}}" title="{{card.FlavorText.Text1}}" />
+            <div style="background: none repeat 0 0 transparent; border: 0 none; font-size: 15px; margin: 0; outline: 0 none; padding: 0; vertical-align: baseline;" title="{{ToolTips.Rarity}}">
                 <div style="float: left;" class="cardSprite cardSprite-star"></div>
             </div>
         </div>
 
-        <div class="cardDeatilsWrapper">
-            <h4>{{card.Name}}
-            </h4>
-            <p class="textnew1">
-                ILLUSTRATOR : {{card.Illustrator}}
-            </p>
-
+        <div id="cardDeatilsWrapper" class="cardDeatilsWrapper">
+            <div style="width: 382px;">
+                <div style="float: left;">
+                    <h4 title="{{card.FlavorText.Text2}}">{{card.Name}}
+                    </h4>
+                    <p class="textnew1">
+                        ILLUSTRATOR : {{card.Illustrator}}
+                    </p>
+                </div>
+                <div class="textnew1" style="width: 387px; text-align: right;">
+                    <span title="{{ToolTips.CardType}}">Card Type</span>: <span ng-hide="card.SubType1">None</span><span title="{{geToolTip(card.SubType1)}}">{{card.SubType1}}</span>  / <span ng-hide="card.SubType2">None</span><span title="{{geToolTip(card.SubType2)}}">{{card.SubType2}}</span>
+                </div>
+            </div>
             <div class="cardStatWrapper">
-                <div style="width: 420px; clear: both;">
+                <div class="cardStatHeaders">
                     <div title="{{ToolTips.HP}}" class="statsheader repeaterSprite repeaterSprite-{{card.Sphere}}">
                         HP
                     </div>
@@ -59,10 +63,10 @@
                         RNG
                     </div>
                     <div title="{{ToolTips.LP}}" class="statsheader repeaterSprite repeaterSprite-{{card.Sphere}}">
-                        LP
+                        LP               
                     </div>
                 </div>
-                <div style="width: 340px; clear: both;">
+                <div class="cardStatData">
                     <div title="{{ToolTips.HP}}" class="statsvalue">
                         {{card.BaseStats.HP}}
                     </div>
@@ -75,7 +79,7 @@
                     <div title="{{ToolTips.AGI}}" class="statsvalue">
                         {{card.BaseStats.AGI}}
                     </div>
-                    <div tooltip="{{ToolTips.RNG}}" class="statsvalue">
+                    <div title="{{ToolTips.RNG}}" class="statsvalue">
                         {{card.BaseStats.RNG}}
                     </div>
                     <div title="{{ToolTips.LP}}" class="statsvalue">
@@ -84,17 +88,14 @@
                 </div>
             </div>
 
-            <div title="{{ToolTips.LV}}" class="cardSprite cardSprite-numberSphere-{{card.Sphere}}" style="float: left; margin-left: -470px;">
+            <div title="{{ToolTips.LV}}" class="cardSprite cardSprite-numberSphere-{{card.Sphere}}" style="float: left; margin-left: -390px;">
                 <div class="sphereBigText">{{card.BaseStats.Level}}</div>
                 <div class="sphereSmallText">
                     LV.
                 </div>
             </div>
-            <div class="textnew1" style="width: 387px; text-align: right;">
-                Card Type: <span ng-hide="card.SubType1">None</span> {{card.SubType1}} / <span ng-hide="card.SubType2">None</span>{{card.SubType2}} 
-            </div>
+
             <div class="textnew1" style="clear: both; width: 387px; text-align: right;">
-                <span title="{{getCardTypeTip(card.SubType1)}}" ><span ng-hide="card.TypeSummary">None</span> {{card.TypeSummary}} </span>
             </div>
             <div ng-repeat="skill in Skills" style="padding-top: 20px;">
                 <div ng-show="skill">
@@ -102,11 +103,11 @@
                         <div style="float: left; vertical-align: middle; font-size: 14px; color: #FFFFFF; font-family: Times New Roman; text-transform: uppercase; padding-left: 2px; padding-top: 2px;">
                             {{skill.Name}}           
                         </div>
-                        <div class="paddedTop skillBoxRightCap">
-                            <div class="paddedTop" title="{{getSkillTip(skill.Type)}}" class="cardSprite cardSprite-Skill-{{skill.Type}}" style="float: left;"></div>
-                            <div ui-jq="popover" data-original-title="{{ToolTips.SP}}" ui-jq="tooltip" style="background-color: black; float: left; height: 19px; margin-right: 6px;color:white;">
-                                <img src="/Content/images/sp.gif" alt="icn" />
-                                SP<span style="font-family: Helvetica; font-weight: bold;">{{skill.SP}}
+                        <div class="skillBoxRightCap">
+                            <div title="{{geToolTip(skill.Type)}}" class="cardSprite cardSprite-Skill-{{skill.Type}}" style="float: left;"></div>
+                            <div ui-jq="popover" data-original-title="{{ToolTips.SP}}" ui-jq="tooltip" style="background-color: black; float: left; height: 19px; margin-right: 6px; color: white; font-family: Helvetica; font-weight: bold;">
+                                <img src="/Content/images/sp.gif" alt="SP" style="margin-top:-2px;"/>
+                                SP <span style="">{{skill.SP}}
                                 </span>
                             </div>
 
@@ -122,10 +123,9 @@
             </div>
         </div>
     </div>
-    
-    <div class="modal"></div>
+
     <script>
-        
+
         $('*').tooltip();
     </script>
 </html>

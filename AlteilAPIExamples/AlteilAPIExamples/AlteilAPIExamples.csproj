@@ -144,6 +144,7 @@
     <Content Include="Content\images\detail-bg1.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\RepeaterSprite.png" />
     <Content Include="Content\images\sp.gif" />
     <Content Include="Content\select2.css" />
     <Content Include="Content\select2.png" />
