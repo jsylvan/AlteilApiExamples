@@ -61,7 +61,7 @@
                     <div title="{{ToolTips.RNG}}" class="statsheader repeaterSprite repeaterSprite-{{card.Sphere}} cardStats">
                         RNG
                     </div>
-                    <div title="{{ToolTips.LP}}" class="statsheader repeaterSprite repeaterSprite-{{card.Sphere}} cardStats notActive">
+                    <div title="{{ToolTips.LP}}" class="laststatsheader repeaterSprite repeaterSprite-{{card.Sphere}} cardStats notActive">
                         LP               
                     </div>
                 </div>
@@ -81,13 +81,13 @@
                     <div title="{{ToolTips.RNG}}" class="statsvalue cardStats">
                         {{card.BaseStats.RNG}}
                     </div>
-                    <div title="{{ToolTips.LP}}" class="statsvalue cardStats notActive">
+                    <div title="{{ToolTips.LP}}" class="laststatsheader  cardStats notActive">
                         {{card.BaseStats.LP}}                        
                     </div>
                 </div>
 
                 <div class="cardStatData" title="{{ToolTips.Grimoire}}" ng-hide="card.CardType != 'Grimoire'">
-                    <div class="statsvalue">
+                    <div class="firststatsvalue">
                         --
                     </div>
                     <div class="statsvalue">
@@ -102,13 +102,33 @@
                     <div class="statsvalue">
                         --
                     </div>
-                    <div class="statsvalue notActive">
+                    <div class="laststatsvalue notActive">
                         --
                     </div>
                 </div>
-                <div class="cardType sk`TableWidth" style="clear:both; float: right; padding-right: 5px;margin-left: -390px;">
-                    <div class="skillTableWidth" style="text-align:right;"><span title="{{getToolTip(card.Sphere)}}">{{card.Sphere}} </span><span title="{{getToolTip(card.MultiSphere)}}">{{card.MultiSphere}} </span><span title="{{ToolTips.CardType}}">Card Type</span>: <span ng-hide="card.SubType1">None</span><span title="{{getToolTip(card.SubType1)}}">{{card.SubType1}}</span>  / <span ng-hide="card.SubType2">None</span> <span title="{{getToolTip(card.SubType2)}}">{{card.SubType2}}</span> </div>
-                    <div class="skillTableWidth" style="text-align:right;"><span title="{{getToolTip(card.CardType)}}">{{card.CardType}}</span><span title="{{getToolTip(card.UnitType)}}" ng-hide="card.CardType == 'Grimoire' || card.UnitType != 'Character'">: {{card.UnitType}}</span></div>
+                <div class="tableSprite tableSprite-{{card.Sphere}}-statbar-bottom cardStatData" style="width:339px;">
+                      <div class="firststatsvalue tabbleBottom " >
+                        
+                    </div>
+                    <div class="statsvalue tabbleBottom ">
+                        
+                    </div>
+                    <div class="statsvalue tabbleBottom ">
+                        
+                    </div>
+                    <div class="statsvalue tabbleBottom ">
+                        
+                    </div>
+                    <div class="statsvalue tabbleBottom ">
+                        
+                    </div>
+                    <div class="laststatsvalue tabbleBottom  notActive">
+                        
+                    </div>
+                </div>
+                <div class="cardTypeText cardTypePosition">
+                    <div class="" style="text-align:right;"><span title="{{getToolTip(card.MultiSphere)}}">{{card.MultiSphere}} </span><span title="{{ToolTips.CardType}}">Card Type</span>: <span ng-hide="card.SubType1">None</span><span title="{{getToolTip(card.SubType1)}}">{{card.SubType1}}</span>  / <span ng-hide="card.SubType2">None</span> <span title="{{getToolTip(card.SubType2)}}">{{card.SubType2}}</span> </div>
+                    <div class="" style="text-align:right;"><span title="{{getToolTip(card.CardType)}}">{{card.CardType}}</span><span title="{{getToolTip(card.UnitType)}}" ng-hide="card.CardType == 'Grimoire' || card.UnitType != 'Character'">: {{card.UnitType}}</span></div>
                 </div>
             </div>
 
@@ -121,16 +141,16 @@
 
             <div class="textnew1" style="clear: both; width: 387px; text-align: right;">
             </div>
-            <div ng-repeat="skill in Skills" style="padding-top: 20px;" ng-show="skill">
+            <div ng-repeat="skill in Skills" ng-show="skill">
                 <div ng-class="skill.Type == 'Soul' && 'notActive' || ''">
-                    <div class="paddedTop cardSprite cardSprite-Skill-{{card.Sphere}}" style="clear: both; padding-left: 3px;">
+                    <div class="paddedTop cardSprite cardSprite-Skill-{{card.Sphere}}" style="clear: both; padding-left: 8px;">
                         <div title="{{getToolTip(skill.Type)}}" class="cardSprite cardSprite-Skill-{{skill.Type}} skillTableWidth" style="float: left; margin-top: 2px;"></div>
                         <div class="cardSkillName glow" style="float: left; vertical-align: middle; text-transform: uppercase; padding-left: 6px; padding-top: 2px;">
                             {{skill.Name}}           
                         </div>
                         <div class="skillBoxRightCap">
 
-                            <div class="cardSkillSP" data-original-title="{{ToolTips.SP}}" style="background-color: black; float: right; height: 16px; overflow:hidden; margin-right: 12px; margin-top: 0px; ">
+                            <div class="cardSkillSP" data-original-title="{{ToolTips.SP}}" style="background-color: black; float: right; height: 16px; overflow:hidden; margin-right: 26px; margin-top: 0px; ">
                                 <img src="/Content/images/sp.gif" alt="SP" style="margin-top: -2px;" />
                                 SP <span style="">{{skill.SP}}
                                 </span>

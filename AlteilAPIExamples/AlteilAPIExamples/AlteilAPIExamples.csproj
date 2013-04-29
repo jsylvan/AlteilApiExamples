@@ -146,6 +146,7 @@
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\RepeaterSprite.png" />
     <Content Include="Content\images\sp.gif" />
+    <Content Include="Content\images\tableBottomRepeater.png" />
     <Content Include="Content\select2.css" />
     <Content Include="Content\select2.png" />
     <Content Include="Content\select2x2.png" />

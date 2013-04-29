@@ -1,5 +1,4 @@
-﻿h4
-{
+﻿h4 {
     color: #000000;
     font-family: times new roman;
     font-size: 17px;
@@ -8,37 +7,45 @@
     text-transform: uppercase;
 }
 
-.paddedTop
-{
+.paddedTop {
     padding-top: 1px;
 }
 
-.skillBoxRightCap
-{
+.skillBoxRightCap {
     float: right;
     padding-right: 3px;
-    padding-top:2px;
+    padding-top: 2px;
 }
 
+.notActive {
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    /* IE 5-7 */
+    filter: alpha(opacity=50);
+    /* Netscape */
+    -moz-opacity: 0.5;
+    /* Safari 1.x */
+    -khtml-opacity: 0.5;
+    /* Good browsers */
+    opacity: 0.5;
+}
 /*
     Overall wrapper around entire card data. In this case, it shows a scroll
     */
-.cardSkinWrapper
-{
+.cardSkinWrapper {
     background-image: url(/Content/images/detail-bg1.png);
     width: 730px;
     height: 462px;
     background-repeat: no-repeat;
     padding-left: 65px;
     padding-top: 60px;
-    margin-top:10px;
+    margin-top: 60px;
 }
 
 /*
     Overall wrapper for the card's detailed stats
     */
-.cardDeatilsWrapper
-{
+.cardDeatilsWrapper {
     float: left;
     padding-left: 15px;
 }
@@ -46,28 +53,94 @@
 /*
     Wraps the grid that contains the card's basestats
     */
-.cardStatWrapper
-{
-    margin-top: 10px;
+.cardStatWrapper {
+    margin-top: 2px;
     margin-left: 50px;
     float: left;
     text-align: center;
 }
 
+.skillTableWidth {
+    width: 387px;
+}
+
+/*
+Skill description is 16 px Helvetica Medium
+Flavor text is 20px Helvetica Medium
+Rarity is 20 px Times Roman
+Illustrator is 15px Times Roman
+All stats (HP, AT, ect) and their number values are 20px Times Roman
+Card type is 16 px Times Roman
+
+    */
+.cardTypeText {
+    font-family: 'Times Roman';
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.cardTypePosition {
+    clear: both;
+    margin-left: -50px;
+    width: 386px;
+}
+
+.cardIllustrator {
+    font-family: 'Times New Roman';
+    font-size: 12px;
+    margin-top: -3px;
+    padding-bottom: 3px;
+}
+
+
+.cardSkillName {
+    font-family: 'Times New Roman';
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.cardStats {
+    font-family: 'Times New Roman';
+    font-size: 15px;
+}
+
+.cardSkillSP {
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cardName {
+    font-family: 'Times';
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cardSkillDescription {
+}
+
+.cardFlavorText {
+}
+
+.cardRarity {
+}
 /*
     Comment text of an individual skill
     */
-.cardSkillComment
-{
-    width: 387px;
-    font-family: 'helvetica';
+.cardSkillComment {
+    font-family: 'Helvetica';
     font-size: 12px;
     margin-left: 7px;
     font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 15px;
 }
 
-.scroll
-{
+.scroll {
     height: 100px;
     overflow: auto;
 }
@@ -75,25 +148,22 @@
 /*
     Shows high level information that can be seen at a quick glance, such as rarity and a picture
     */
-.cardQuickGlanceWrapper
-{
+.cardQuickGlanceWrapper {
     float: left;
 }
 
 /*
     Shows the title details of card stats
     */
-.cardStatHeaders
-{
-    width: 340px;
+.cardStatHeaders {
+    width: 360px;
     clear: both;
 }
 /*
     Shows the number values of card stats
     */
-.cardStatData
-{
-    width: 340px;
+.cardStatData {
+    width: 360px;
     clear: both;
 }
 
@@ -102,8 +172,7 @@
     */
 
 
-.textnew1
-{
+.textnew1 {
     background: none repeat scroll 0 0 transparent;
     border: 0 none;
     font-family: Times New Roman;
@@ -118,226 +187,223 @@
 /*
     One character data appearing in the spehere, such as a card's level
     */
-.sphereBigText
-{
+.sphereBigText {
     font-family: "Times New Roman",Times,serif;
     text-align: center;
-    font-size: 40px;
+    font-size: 54px;
     line-height: 44px;
+    margin-top: 6px;
+}
+
+.glow {
 }
 
 /*
     Explenation as to what the big text means, such as "Level" or "Lv."
     */
-.sphereSmallText
-{
+.sphereSmallText {
     text-align: center;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 0px;
     font-weight: bold;
+    font-family: times;
 }
 
-.statsheader
-{
+.statsheader {
     border-right: 1px inset black;
     float: left;
-    width: 55px;
+    width: 54px;
 }
 
-.statsvalue
-{
+.firststatsheader {
     border-right: 1px inset black;
     float: left;
-    width: 55px;
+    width: 60px;
+    padding-left: 5px;
+}
+
+.laststatsheader {
+    border-right: 1px inset black;
+    float: left;
+    width: 52px;
+}
+
+.statsvalue {
+    border-right: 1px inset black;
+    float: left;
+    width: 54px;
     background-color: white;
 }
+
+.firststatsvalue {
+    border-right: 1px inset black;
+    float: left;
+    width: 60px;
+    background-color: white;
+    padding-left: 5px;
+}
+
+.laststatsvalue {
+    border-right: 1px inset black;
+    float: left;
+    width: 52px;
+    background-color: white;
+}
+
 /**********
     Image Sprites
     ******/
 
-.cardSprite
-{
+.cardSprite {
     background: url(/Content/images/CardSpriteSheet.png) no-repeat;
     display: block;
 }
 
-.cardSprite-star
-{
+.cardSprite-star {
     width: 29px;
     height: 30px;
     background-position: -5px -5px;
 }
 
-.cardSprite-Skill-yellow
-{
-    width: 387px;
+.cardSprite-Skill-Refess {
     height: 24px;
     background-position: -5px -45px;
 }
 
-.cardSprite-Skill-Auto
-{
+.cardSprite-Skill-Auto {
     width: 69px;
     height: 18px;
     background-position: -44px -5px;
 }
 
-.cardSprite-Skill-Close
-{
+.cardSprite-Skill-Close {
     width: 69px;
     height: 18px;
     background-position: -123px -5px;
 }
 
-.cardSprite-Skill-Gowen
-{
-    width: 387px;
+.cardSprite-Skill-Gowen {
     height: 24px;
     background-position: -5px -79px;
 }
 
-.cardSprite-Skill-purple
-{
-    width: 387px;
+.cardSprite-Skill-Lawtia {
     height: 24px;
     background-position: -5px -113px;
 }
 
-.cardSprite-Skill-Action
-{
+.cardSprite-Skill-Action {
     width: 69px;
     height: 18px;
     background-position: -202px -5px;
 }
 
-.cardSprite-list-t1
-{
-    width: 387px;
+
+.cardSprite-Skill-Falkow {
     height: 24px;
     background-position: -5px -147px;
 }
 
-.cardSprite-table-bg1-Gowen
-{
+.cardSprite-table-bg1-Gowen {
     width: 12px;
     height: 18px;
     background-position: -281px -5px;
     background-repeat: repeat-x;
 }
 
-.cardSprite-Skill-Open
-{
+.cardSprite-Skill-Open {
     width: 69px;
     height: 18px;
     background-position: -303px -5px;
 }
 
-.cardSprite-numberSphere-Gowen
-{
+.cardSprite-numberSphere-Gowen {
     width: 65px;
     height: 64px;
     background-position: -5px -181px;
 }
 
-.cardSprite-number-bg
-{
+.cardSprite-numberSphere-Falkow {
     width: 65px;
     height: 65px;
     background-position: -80px -181px;
 }
 
-.cardSprite-number-bg-purple
-{
+.cardSprite-numberSphere-Lawtia {
     width: 66px;
     height: 65px;
     background-position: -155px -181px;
 }
 
-.cardSprite-number-bg-yellow
-{
+.cardSprite-numberSphere-Refess {
     width: 66px;
     height: 65px;
     background-position: -231px -181px;
 }
 
-.cardSprite-Skill-Rank
-{
+.cardSprite-Skill-Rank {
     width: 69px;
     height: 18px;
     background-position: -307px -181px;
 }
 
-.cardSprite-soul
-{
+.cardSprite-Skill-Soul {
     width: 69px;
     height: 18px;
     background-position: -307px -209px;
 }
 
-.cardSprite-Skill-Start
-{
+.cardSprite-Skill-Start {
     width: 69px;
     height: 18px;
     background-position: -307px -237px;
 }
 
-.cardSprite-table-bg1
-{
+.cardSprite-table-bg1-Falkow {
     width: 12px;
     height: 18px;
     background-position: -5px -265px;
 }
 
-.cardSprite-table-bg1-purple
-{
+.cardSprite-table-bg1-Lawtia {
     width: 12px;
     height: 18px;
     background-position: -27px -265px;
 }
 
-.cardSprite-table-bg1-yellow
-{
+.cardSprite-table-bg1-Refess {
     width: 12px;
     height: 18px;
     background-position: -49px -265px;
 }
 
-.cardSprite-Skill-Trait
-{
+.cardSprite-Skill-Trait {
     width: 69px;
     height: 18px;
     background-position: -71px -265px;
 }
 
-.repeaterSprite
-{
+.repeaterSprite {
     background: url(/Content/Images/RepeaterSprite.png) repeat-x;
     display: block;
 }
 
-.repeaterSprite-table-bg1
-{
-    width: 12px;
+.repeaterSprite-Falkow {
     height: 18px;
     background-position: -0px -0px;
 }
 
-.repeaterSprite-table-bg1-purple
-{
-    width: 12px;
+.repeaterSprite-Lawtia {
     height: 18px;
     background-position: -0px -18px;
 }
 
-.repeaterSprite-Gowen
-{
+.repeaterSprite-Gowen {
     height: 18px;
     background-position: -0px -36px;
 }
 
-.repeaterSprite-table-bg1-yellow
-{
-    width: 12px;
+.repeaterSprite-Refess {
     height: 18px;
     background-position: -0px -54px;
 }
@@ -347,8 +413,7 @@
    with position:fixed. Width, height, top and left speak
    speak for themselves. Background we set to 80% white with
    our animation centered, and no-repeating */
-.modal
-{
+.modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -359,21 +424,57 @@
     background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
 }
 
-body
-{
-    font-style : Palatino, Baskerville, Georgia, serif;
+body {
+    font-style: Palatino, Baskerville, Georgia, serif;
+    line-height: 18px;
 }
 
     /* When the body has the loading class, we turn
    the scrollbar off with overflow:hidden */
-    body.loading
-    {
+    body.loading {
         overflow: hidden;
     }
 
         /* Anytime the body has the loading class, our
    modal element will be visible */
-        body.loading .modal
-        {
+        body.loading .modal {
             display: block;
         }
+
+.tableSprite {
+    background: url(/Content/images/tableBottomRepeater.png) ;
+    display: block;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Falkow-statbar-bottom {
+
+    height: 3px;
+    background-position: -0px -0px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Gowen-statbar-bottom {
+
+    height: 3px;
+    background-position: -0px -3px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Lawtia-statbar-bottom {
+
+    height: 3px;
+    background-position: -0px -6px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Refess-statbar-bottom {
+
+    height: 3px;
+    background-position: -0px -9px;
+    background-repeat: repeat-x;
+}
+
+.tabbleBottom {
+    height:3px;background-color:transparent;
+}

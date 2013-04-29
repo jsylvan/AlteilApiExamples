@@ -112,7 +112,7 @@ CardController = function ($scope, $resource) {
         return $scope.ToolTips.Character;
     }
 
-    $scope.geToolTip = function (skill) {
+    $scope.getToolTip = function (skill) {
         return $scope.ToolTips[skill.replace(/\s+/g, '')];
     }
 
