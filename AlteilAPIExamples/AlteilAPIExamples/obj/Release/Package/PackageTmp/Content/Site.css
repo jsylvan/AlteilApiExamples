@@ -17,22 +17,9 @@
 {
     float: right;
     padding-right: 3px;
-    padding-top: 2px;
+    padding-top:2px;
 }
 
-.notActive
-{
-    /* IE 8 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    /* IE 5-7 */
-    filter: alpha(opacity=50);
-    /* Netscape */
-    -moz-opacity: 0.5;
-    /* Safari 1.x */
-    -khtml-opacity: 0.5;
-    /* Good browsers */
-    opacity: 0.5;
-}
 /*
     Overall wrapper around entire card data. In this case, it shows a scroll
     */
@@ -44,7 +31,7 @@
     background-repeat: no-repeat;
     padding-left: 65px;
     padding-top: 60px;
-    margin-top: 60px;
+    margin-top:10px;
 }
 
 /*
@@ -61,88 +48,19 @@
     */
 .cardStatWrapper
 {
-    margin-top: 2px;
+    margin-top: 10px;
     margin-left: 50px;
     float: left;
     text-align: center;
 }
 
-.skillTableWidth
-{
-    width: 387px;
-}
-
-/*
-Skill description is 16 px Helvetica Medium
-Flavor text is 20px Helvetica Medium
-Rarity is 20 px Times Roman
-Illustrator is 15px Times Roman
-All stats (HP, AT, ect) and their number values are 20px Times Roman
-Card type is 16 px Times Roman
-
-    */
-.cardType
-{
-    font-family: 'Times Roman';
-    font-size: 13px;
-    text-transform: uppercase;
-}
-
-.cardIllustrator
-{
-    font-family: 'Times New Roman';
-    font-size: 13px;
-}
-
-
-.cardSkillName
-{
-    font-family: 'Times New Roman';
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-}
-
-.cardStats
-{
-    font-family: 'Times New Roman';
-    font-size: 15px;
-}
-
-.cardSkillSP
-{
-    color: white;
-    font-family: Helvetica;
-    font-weight: bold;
-    font-size: 14px;
-   
-}
-
-.cardName
-{
-    font-family: 'Times';
-    font-size: 17px;
-    text-transform: uppercase;
-}
-
-.cardSkillDescription
-{
-}
-
-.cardFlavorText
-{
-}
-
-.cardRarity
-{
-}
 /*
     Comment text of an individual skill
     */
 .cardSkillComment
 {
-    font-family: 'Helvetica';
+    width: 387px;
+    font-family: 'helvetica';
     font-size: 12px;
     margin-left: 7px;
     font-weight: bold;
@@ -250,8 +168,9 @@ Card type is 16 px Times Roman
     background-position: -5px -5px;
 }
 
-.cardSprite-Skill-Refess
+.cardSprite-Skill-yellow
 {
+    width: 387px;
     height: 24px;
     background-position: -5px -45px;
 }
@@ -272,12 +191,14 @@ Card type is 16 px Times Roman
 
 .cardSprite-Skill-Gowen
 {
+    width: 387px;
     height: 24px;
     background-position: -5px -79px;
 }
 
-.cardSprite-Skill-Lawtia
+.cardSprite-Skill-purple
 {
+    width: 387px;
     height: 24px;
     background-position: -5px -113px;
 }
@@ -289,9 +210,9 @@ Card type is 16 px Times Roman
     background-position: -202px -5px;
 }
 
-
-.cardSprite-Skill-Falkow
+.cardSprite-list-t1
 {
+    width: 387px;
     height: 24px;
     background-position: -5px -147px;
 }
@@ -318,21 +239,21 @@ Card type is 16 px Times Roman
     background-position: -5px -181px;
 }
 
-.cardSprite-numberSphere-Falkow
+.cardSprite-number-bg
 {
     width: 65px;
     height: 65px;
     background-position: -80px -181px;
 }
 
-.cardSprite-numberSphere-Lawtia
+.cardSprite-number-bg-purple
 {
     width: 66px;
     height: 65px;
     background-position: -155px -181px;
 }
 
-.cardSprite-numberSphere-Refess
+.cardSprite-number-bg-yellow
 {
     width: 66px;
     height: 65px;
@@ -346,7 +267,7 @@ Card type is 16 px Times Roman
     background-position: -307px -181px;
 }
 
-.cardSprite-Skill-Soul
+.cardSprite-soul
 {
     width: 69px;
     height: 18px;
@@ -360,21 +281,21 @@ Card type is 16 px Times Roman
     background-position: -307px -237px;
 }
 
-.cardSprite-table-bg1-Falkow
+.cardSprite-table-bg1
 {
     width: 12px;
     height: 18px;
     background-position: -5px -265px;
 }
 
-.cardSprite-table-bg1-Lawtia
+.cardSprite-table-bg1-purple
 {
     width: 12px;
     height: 18px;
     background-position: -27px -265px;
 }
 
-.cardSprite-table-bg1-Refess
+.cardSprite-table-bg1-yellow
 {
     width: 12px;
     height: 18px;
@@ -394,14 +315,16 @@ Card type is 16 px Times Roman
     display: block;
 }
 
-.repeaterSprite-Falkow
+.repeaterSprite-table-bg1
 {
+    width: 12px;
     height: 18px;
     background-position: -0px -0px;
 }
 
-.repeaterSprite-Lawtia
+.repeaterSprite-table-bg1-purple
 {
+    width: 12px;
     height: 18px;
     background-position: -0px -18px;
 }
@@ -412,8 +335,9 @@ Card type is 16 px Times Roman
     background-position: -0px -36px;
 }
 
-.repeaterSprite-Refess
+.repeaterSprite-table-bg1-yellow
 {
+    width: 12px;
     height: 18px;
     background-position: -0px -54px;
 }
@@ -437,7 +361,7 @@ Card type is 16 px Times Roman
 
 body
 {
-    font-style: Palatino, Baskerville, Georgia, serif;
+    font-style : Palatino, Baskerville, Georgia, serif;
 }
 
     /* When the body has the loading class, we turn

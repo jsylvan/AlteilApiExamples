@@ -104,7 +104,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/13/2013 10:30:00</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>04/25/2013 15:02:24</publishTime>
+      <publishTime>04/25/2013 09:42:50</publishTime>
     </File>
     <File Include="Content/spinner.gif">
       <publishTime>04/13/2013 10:30:00</publishTime>
@@ -368,7 +368,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/13/2013 10:30:01</publishTime>
     </File>
     <File Include="Scripts/Card/CardApp.js">
-      <publishTime>04/25/2013 14:32:23</publishTime>
+      <publishTime>04/25/2013 08:33:13</publishTime>
     </File>
     <File Include="Scripts/i18n/angular-locale_am-et.js">
       <publishTime>04/13/2013 10:30:01</publishTime>
@@ -899,7 +899,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/13/2013 10:30:00</publishTime>
     </File>
     <File Include="Views/Card/index.aspx">
-      <publishTime>04/25/2013 15:04:39</publishTime>
+      <publishTime>04/25/2013 09:46:19</publishTime>
     </File>
     <File Include="Views/Home/index.aspx">
       <publishTime>04/13/2013 10:30:01</publishTime>
@@ -911,7 +911,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/13/2013 10:30:01</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/25/2013 15:12:47</publishTime>
+      <publishTime>04/25/2013 09:47:47</publishTime>
     </File>
   </ItemGroup>
 </Project>
