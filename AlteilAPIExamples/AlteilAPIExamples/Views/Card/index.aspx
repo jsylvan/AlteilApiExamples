@@ -44,91 +44,91 @@
                 </div>
 
             </div>
-            <div class="cardStatWrapper">
+            <div class="cardStatWrapper" >
                 <div class="cardStatHeaders">
-                    <div title="{{ToolTips.HP}}" class="firststatsheader repeaterSprite repeaterSprite-{{card.Sphere}} cardStats">
+                    <div title="{{ToolTips.HP}}" class="statCell firstCellWidth repeaterSprite repeaterSprite-{{card.Sphere}} cardStats cardStatsHeader">
                         HP
                     </div>
-                    <div title="{{ToolTips.AT}}" class="statsheader repeaterSprite repeaterSprite-{{card.Sphere}} cardStats">
+                    <div title="{{ToolTips.AT}}" class="statCell middleCellWidth repeaterSprite repeaterSprite-{{card.Sphere}} cardStats cardStatsHeader">
                         AT
                     </div>
-                    <div title="{{ToolTips.DF}}" class="statsheader repeaterSprite repeaterSprite-{{card.Sphere}} cardStats">
+                    <div title="{{ToolTips.DF}}" class="statCell  middleCellWidth repeaterSprite repeaterSprite-{{card.Sphere}} cardStats cardStatsHeader">
                         DF
                     </div>
-                    <div title="{{ToolTips.AGI}}" class="statsheader repeaterSprite repeaterSprite-{{card.Sphere}} cardStats">
+                    <div title="{{ToolTips.AGI}}" class="statCell middleCellWidth repeaterSprite repeaterSprite-{{card.Sphere}} cardStats cardStatsHeader">
                         AGI
                     </div>
-                    <div title="{{ToolTips.RNG}}" class="statsheader repeaterSprite repeaterSprite-{{card.Sphere}} cardStats">
+                    <div title="{{ToolTips.RNG}}" class="statCell middleCellWidth repeaterSprite repeaterSprite-{{card.Sphere}} cardStats cardStatsHeader">
                         RNG
                     </div>
-                    <div title="{{ToolTips.LP}}" class="laststatsheader repeaterSprite repeaterSprite-{{card.Sphere}} cardStats notActive">
+                    <div title="{{ToolTips.LP}}" class="statCell lastCellWidth repeaterSprite repeaterSprite-{{card.Sphere}} cardStats notActive">
                         LP               
                     </div>
                 </div>
                 <div class="cardStatData" ng-hide="card.CardType == 'Grimoire'">
-                    <div title="{{ToolTips.HP}}" class="firststatsvalue cardStats">
+                    <div title="{{ToolTips.HP}}" class="statCell firstCellWidth cardStats cardStatsValue">
                         {{card.BaseStats.HP}}
                     </div>
-                    <div title="{{ToolTips.AT}}" class="statsvalue cardStats">
+                    <div title="{{ToolTips.AT}}" class="statCell middleCellWidth cardStats cardStatsValue">
                         {{card.BaseStats.AT}}
                     </div>
-                    <div title="{{ToolTips.DF}}" class="statsvalue cardStats">
+                    <div title="{{ToolTips.DF}}" class="statCell middleCellWidth cardStats cardStatsValue">
                         {{card.BaseStats.DF}}
                     </div>
-                    <div title="{{ToolTips.AGI}}" class="statsvalue cardStats">
+                    <div title="{{ToolTips.AGI}}" class="statCell middleCellWidth cardStats cardStatsValue">
                         {{card.BaseStats.AGI}}
                     </div>
-                    <div title="{{ToolTips.RNG}}" class="statsvalue cardStats">
+                    <div title="{{ToolTips.RNG}}" class="statCell middleCellWidth cardStats cardStatsValue">
                         {{card.BaseStats.RNG}}
                     </div>
-                    <div title="{{ToolTips.LP}}" class="laststatsheader  cardStats notActive">
+                    <div title="{{ToolTips.LP}}" class="statCell lastCellWidth  cardStats notActive cardStatsValue">
                         {{card.BaseStats.LP}}                        
                     </div>
                 </div>
 
                 <div class="cardStatData" title="{{ToolTips.Grimoire}}" ng-hide="card.CardType != 'Grimoire'">
-                    <div class="firststatsvalue">
+                    <div class="statCell firstCellWidth">
                         --
                     </div>
-                    <div class="statsvalue">
+                    <div class="statCell middleCellWidth">
                         --
                     </div>
-                    <div class="statsvalue">
+                    <div class="statCell middleCellWidth">
                         --
                     </div>
-                    <div class="statsvalue">
+                    <div class="statCell middleCellWidth">
                         --
                     </div>
-                    <div class="statsvalue">
+                    <div class="statCell middleCellWidth">
                         --
                     </div>
-                    <div class="laststatsvalue notActive">
+                    <div class="statCell lastCellWidth notActive">
                         --
                     </div>
                 </div>
-                <div class="tableSprite tableSprite-{{card.Sphere}}-statbar-bottom cardStatData" style="width:339px;">
-                      <div class="firststatsvalue tabbleBottom " >
+                <div class="cardStatData tabbleBottomWidth" >
+                      <div class="firstCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom" >
                         
                     </div>
-                    <div class="statsvalue tabbleBottom ">
+                    <div class="middleCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom">
                         
                     </div>
-                    <div class="statsvalue tabbleBottom ">
+                    <div class="middleCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom">
                         
                     </div>
-                    <div class="statsvalue tabbleBottom ">
+                    <div class="middleCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom">
                         
                     </div>
-                    <div class="statsvalue tabbleBottom ">
+                    <div class="middleCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom">
                         
                     </div>
-                    <div class="laststatsvalue tabbleBottom  notActive">
+                    <div class="lastCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom notActive">
                         
                     </div>
                 </div>
                 <div class="cardTypeText cardTypePosition">
                     <div class="" style="text-align:right;"><span title="{{getToolTip(card.MultiSphere)}}">{{card.MultiSphere}} </span><span title="{{ToolTips.CardType}}">Card Type</span>: <span ng-hide="card.SubType1">None</span><span title="{{getToolTip(card.SubType1)}}">{{card.SubType1}}</span>  / <span ng-hide="card.SubType2">None</span> <span title="{{getToolTip(card.SubType2)}}">{{card.SubType2}}</span> </div>
-                    <div class="" style="text-align:right;"><span title="{{getToolTip(card.CardType)}}">{{card.CardType}}</span><span title="{{getToolTip(card.UnitType)}}" ng-hide="card.CardType == 'Grimoire' || card.UnitType != 'Character'">: {{card.UnitType}}</span></div>
+                    <div class="" style="text-align:right;line-height:10px;padding-bottom:9px;"><span title="{{getToolTip(card.CardType)}}">{{card.CardType}}</span><span title="{{getToolTip(card.UnitType)}}" ng-hide="card.CardType == 'Grimoire' || card.UnitType != 'Character'">: {{card.UnitType}}</span></div>
                 </div>
             </div>
 

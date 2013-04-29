@@ -99,7 +99,8 @@ CardController = function ($scope, $resource) {
         return [this.card.Skills.Skill0,
           this.card.Skills.Skill1,
           this.card.Skills.Skill2,
-          this.card.Skills.Skill3];
+          this.card.Skills.Skill3,
+        this.card.Skills.Soul];
     };
 
     $scope.getCardTypeTip = function (cardType) {

@@ -54,7 +54,7 @@
     Wraps the grid that contains the card's basestats
     */
 .cardStatWrapper {
-    margin-top: 2px;
+    margin-top: -3px;
     margin-left: 50px;
     float: left;
     text-align: center;
@@ -75,14 +75,16 @@ Card type is 16 px Times Roman
     */
 .cardTypeText {
     font-family: 'Times Roman';
-    font-size: 13px;
+    font-size: 11px;
     text-transform: uppercase;
+    font-weight:bold;
 }
 
 .cardTypePosition {
     clear: both;
-    margin-left: -50px;
+    margin-left: -50px;    
     width: 386px;
+    margin-top:2px;
 }
 
 .cardIllustrator {
@@ -104,6 +106,9 @@ Card type is 16 px Times Roman
 .cardStats {
     font-family: 'Times New Roman';
     font-size: 15px;
+}
+.cardStatsValue {
+    line-height:25px;
 }
 
 .cardSkillSP {
@@ -209,46 +214,27 @@ Card type is 16 px Times Roman
     font-family: times;
 }
 
-.statsheader {
-    border-right: 1px inset black;
-    float: left;
+
+.middleCellWidth {
     width: 54px;
 }
 
-.firststatsheader {
+.statCell {
     border-right: 1px inset black;
     float: left;
-    width: 60px;
-    padding-left: 5px;
+    background-color: white;    
 }
 
-.laststatsheader {
-    border-right: 1px inset black;
-    float: left;
+.firstCellWidth {
+    width: 60px;
+    padding-left: 2px;
+}
+
+.lastCellWidth {
     width: 52px;
 }
 
-.statsvalue {
-    border-right: 1px inset black;
-    float: left;
-    width: 54px;
-    background-color: white;
-}
 
-.firststatsvalue {
-    border-right: 1px inset black;
-    float: left;
-    width: 60px;
-    background-color: white;
-    padding-left: 5px;
-}
-
-.laststatsvalue {
-    border-right: 1px inset black;
-    float: left;
-    width: 52px;
-    background-color: white;
-}
 
 /**********
     Image Sprites
@@ -442,39 +428,49 @@ body {
         }
 
 .tableSprite {
-    background: url(/Content/images/tableBottomRepeater.png) ;
+    background: url(/Content/images/tableBottomRepeater.png);
     display: block;
     background-repeat: repeat-x;
 }
 
 .tableSprite-Falkow-statbar-bottom {
-
     height: 3px;
     background-position: -0px -0px;
     background-repeat: repeat-x;
 }
 
 .tableSprite-Gowen-statbar-bottom {
-
     height: 3px;
     background-position: -0px -3px;
     background-repeat: repeat-x;
 }
 
 .tableSprite-Lawtia-statbar-bottom {
-
     height: 3px;
     background-position: -0px -6px;
     background-repeat: repeat-x;
 }
 
 .tableSprite-Refess-statbar-bottom {
-
     height: 3px;
     background-position: -0px -9px;
     background-repeat: repeat-x;
 }
 
 .tabbleBottom {
-    height:3px;background-color:transparent;
+    height: 3px;
+    background-color: transparent;
+    border-right:solid 1px black;float:left;
+    border-bottom:solid 1px black;float:left;
+}
+
+.tabbleBottomWidth {
+    max-width: 336px;
+}
+
+.tableBottomCellBorder {
+    border: solid 1px black;
+}
+
+.cardStatsHeader {
 }
