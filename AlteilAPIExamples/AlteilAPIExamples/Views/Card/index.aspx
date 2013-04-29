@@ -111,7 +111,7 @@
 
             <div title="{{ToolTips.LV}}" class="cardSprite cardSprite-numberSphere-{{card.Sphere}}" style="float: left; margin-left: -390px;margin-top:-10px;">
                 <div class="sphereBigText">{{card.BaseStats.Level}}</div>
-                <div class="sphereSmallText">
+                <div class="sphereSmallText"nl
                     LV.
                 </div>
             </div>
