@@ -79,18 +79,10 @@ CardController = function ($scope, $resource) {
         this.Loading = "loading";
         this.card = this.Activity.get({
             cardID: id
-        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); });
+        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); $scope.Rarity = [1, 2, 3, 4]; });
 
     };
 
-    $scope.fetch = function () {
-        me = this;
-        this.Loading = "loading";
-        this.card = this.Activity.get({
-            cardID: 62
-        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); });
-
-    };
     $scope.getSkills = function () {
 
         if (!this.card) {
@@ -114,40 +106,14 @@ CardController = function ($scope, $resource) {
     }
 
     $scope.getToolTip = function (skill) {
+        if (skill == null) {
+            return "";
+        }
         return $scope.ToolTips[skill.replace(/\s+/g, '')];
-    }
-
-    $scope.getAllegianceTip = function (skill) {
-        if (skill === 'Start')
-            return $scope.ToolTips.start;
-
-        if (skill === 'Open')
-            return $scope.ToolTips.open;
-
-        if (skill === 'Auto')
-            return $scope.ToolTips.auto;
-
-        if (skill === 'Action')
-            return $scope.ToolTips.action;
-
-        if (skill === 'Counter')
-            return $scope.ToolTips.counter;
-
-        if (skill === 'Close')
-            return $scope.ToolTips.close;
-
-        if (skill === 'Soul')
-            return $scope.ToolTips.soul;
-
-        return skill;
-    }
-
-    $scope.toolTip = function (tip) {
-        alert(tip);
-        return { title: tip };
-    };
-
-    $scope.loadCard(getQueryVariable("id"));
+    }   
+    $scope.strID = getQueryVariable("id");
+    $scope.loadCard($scope.strID);
+    
 };
 ;
 

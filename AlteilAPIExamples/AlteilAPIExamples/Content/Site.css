@@ -1,4 +1,12 @@
-﻿h4 {
+﻿
+.scrollPane {
+    height:230px;
+    overflow: auto;
+    float:left;
+    width:430px;
+}
+
+h4 {
     color: #000000;
     font-family: times new roman;
     font-size: 17px;
@@ -77,14 +85,14 @@ Card type is 16 px Times Roman
     font-family: 'Times Roman';
     font-size: 11px;
     text-transform: uppercase;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .cardTypePosition {
     clear: both;
-    margin-left: -50px;    
+    margin-left: -50px;
     width: 386px;
-    margin-top:2px;
+    margin-top: 2px;
 }
 
 .cardIllustrator {
@@ -107,8 +115,9 @@ Card type is 16 px Times Roman
     font-family: 'Times New Roman';
     font-size: 15px;
 }
+
 .cardStatsValue {
-    line-height:25px;
+    line-height: 25px;
 }
 
 .cardSkillSP {
@@ -222,7 +231,509 @@ Card type is 16 px Times Roman
 .statCell {
     border-right: 1px inset black;
     float: left;
-    background-color: white;    
+    background-color: white;
+}
+
+.firstCellWidth {
+    width: 60px;
+    padding-left: 2px;
+}
+
+.lastCellWidth {
+    width: 52px;
+}
+
+
+
+/**********
+    Image Sprites
+    ******/
+
+.cardSprite {
+    background: url(/Content/images/CardSpriteSheet.png) no-repeat;
+    display: block;
+}
+
+.cardSprite-star {
+    width: 29px;
+    height: 30px;
+    background-position: -5px -5px;
+}
+
+.cardSprite-Skill-Refess {
+    height: 24px;
+    background-position: -5px -45px;
+}
+
+.cardSprite-Skill-Auto {
+    width: 69px;
+    height: 18px;
+    background-position: -44px -5px;
+}
+
+.cardSprite-Skill-Close {
+    width: 69px;
+    height: 18px;
+    background-position: -123px -5px;
+}
+
+.cardSprite-Skill-Gowen {
+    height: 24px;
+    background-position: -5px -79px;
+}
+
+.cardSprite-Skill-Lawtia {
+    height: 24px;
+    background-position: -5px -113px;
+}
+
+.cardSprite-Skill-Action {
+    width: 69px;
+    height: 18px;
+    background-position: -202px -5px;
+}
+
+
+.cardSprite-Skill-Falkow {
+    height: 24px;
+    background-position: -5px -147px;
+}
+
+.cardSprite-table-bg1-Gowen {
+    width: 12px;
+    height: 18px;
+    background-position: -281px -5px;
+    background-repeat: repeat-x;
+}
+
+.cardSprite-Skill-Open {
+    width: 69px;
+    height: 18px;
+    background-position: -303px -5px;
+}
+
+.cardSprite-numberSphere-Gowen {
+    width: 65px;
+    height: 64px;
+    background-position: -5px -181px;
+}
+
+.cardSprite-numberSphere-Falkow {
+    width: 65px;
+    height: 65px;
+    background-position: -80px -181px;
+}
+
+.cardSprite-numberSphere-Lawtia {
+    width: 66px;
+    height: 65px;
+    background-position: -155px -181px;
+}
+
+.cardSprite-numberSphere-Refess {
+    width: 66px;
+    height: 65px;
+    background-position: -231px -181px;
+}
+
+.cardSprite-Skill-Rank {
+    width: 69px;
+    height: 18px;
+    background-position: -307px -181px;
+}
+
+.cardSprite-Skill-Soul {
+    width: 69px;
+    height: 18px;
+    background-position: -307px -209px;
+}
+
+.cardSprite-Skill-Start {
+    width: 69px;
+    height: 18px;
+    background-position: -307px -237px;
+}
+
+.cardSprite-table-bg1-Falkow {
+    width: 12px;
+    height: 18px;
+    background-position: -5px -265px;
+}
+
+.cardSprite-table-bg1-Lawtia {
+    width: 12px;
+    height: 18px;
+    background-position: -27px -265px;
+}
+
+.cardSprite-table-bg1-Refess {
+    width: 12px;
+    height: 18px;
+    background-position: -49px -265px;
+}
+
+.cardSprite-Skill-Trait {
+    width: 69px;
+    height: 18px;
+    background-position: -71px -265px;
+}
+
+.repeaterSprite {
+    background: url(/Content/Images/RepeaterSprite.png) repeat-x;
+    display: block;
+}
+
+.repeaterSprite-Falkow {
+    height: 18px;
+    background-position: -0px -0px;
+}
+
+.repeaterSprite-Lawtia {
+    height: 18px;
+    background-position: -0px -18px;
+}
+
+.repeaterSprite-Gowen {
+    height: 18px;
+    background-position: -0px -36px;
+}
+
+.repeaterSprite-Refess {
+    height: 18px;
+    background-position: -0px -54px;
+}
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   speak for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+}
+
+body {
+    font-style: Palatino, Baskerville, Georgia, serif;
+    line-height: 18px;
+    background-color:transparent;
+}
+
+    /* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+    body.loading {
+        overflow: hidden;
+    }
+
+        /* Anytime the body has the loading class, our
+   modal element will be visible */
+        body.loading .modal {
+            display: block;
+        }
+
+.tableSprite {
+    background: url(/Content/images/tableBottomRepeater.png);
+    display: block;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Falkow-statbar-bottom {
+    height: 3px;
+    background-position: -0px -0px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Gowen-statbar-bottom {
+    height: 3px;
+    background-position: -0px -3px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Lawtia-statbar-bottom {
+    height: 3px;
+    background-position: -0px -6px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Refess-statbar-bottom {
+    height: 3px;
+    background-position: -0px -9px;
+    background-repeat: repeat-x;
+}
+
+.tabbleBottom {
+    height: 3px;
+    background-color: transparent;
+    border-right: solid 1px black;
+    float: left;
+    border-bottom: solid 1px black;
+    float: left;
+}
+
+.tabbleBottomWidth {
+    max-width: 336px;
+}
+
+.tableBottomCellBorder {
+    border: solid 1px black;
+}
+
+.cardStatsHeader {
+}
+
+.cardFlavorText {
+    width: 387px;
+    font-size: 12px;
+    line-height: 15px;
+    padding-top: 2px;
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+.cardRarity {
+    font-family: times;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+. .rarityHR {
+    width: 200px;
+    h4;
+
+{
+    color: #000000;
+    font-family: times new roman;
+    font-size: 17px;
+    margin: 0 0 0 0px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.paddedTop {
+    padding-top: 1px;
+}
+
+.skillBoxRightCap {
+    float: right;
+    padding-right: 3px;
+    padding-top: 2px;
+}
+
+.notActive {
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    /* IE 5-7 */
+    filter: alpha(opacity=50);
+    /* Netscape */
+    -moz-opacity: 0.5;
+    /* Safari 1.x */
+    -khtml-opacity: 0.5;
+    /* Good browsers */
+    opacity: 0.5;
+}
+/*
+    Overall wrapper around entire card data. In this case, it shows a scroll
+    */
+.cardSkinWrapper {
+    background-image: url(/Content/images/detail-bg1.png);
+    width: 730px;
+    height: 462px;
+    background-repeat: no-repeat;
+    padding-left: 65px;
+    padding-top: 60px;
+    margin-top: 60px;
+}
+
+/*
+    Overall wrapper for the card's detailed stats
+    */
+.cardDeatilsWrapper {
+    float: left;
+    padding-left: 15px;
+}
+
+/*
+    Wraps the grid that contains the card's basestats
+    */
+.cardStatWrapper {
+    margin-top: -3px;
+    margin-left: 50px;
+    float: left;
+    text-align: center;
+}
+
+.skillTableWidth {
+    width: 387px;
+}
+
+/*
+Skill description is 16 px Helvetica Medium
+Flavor text is 20px Helvetica Medium
+Rarity is 20 px Times Roman
+Illustrator is 15px Times Roman
+All stats (HP, AT, ect) and their number values are 20px Times Roman
+Card type is 16 px Times Roman
+
+    */
+.cardTypeText {
+    font-family: 'Times Roman';
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cardTypePosition {
+    clear: both;
+    margin-left: -50px;
+    width: 386px;
+    margin-top: 2px;
+}
+
+.cardIllustrator {
+    font-family: 'Times New Roman';
+    font-size: 12px;
+    margin-top: -3px;
+    padding-bottom: 3px;
+}
+
+
+.cardSkillName {
+    font-family: 'Times New Roman';
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.cardStats {
+    font-family: 'Times New Roman';
+    font-size: 15px;
+}
+
+.cardStatsValue {
+    line-height: 25px;
+}
+
+.cardSkillSP {
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cardName {
+    font-family: 'Times';
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cardSkillDescription {
+}
+
+.cardFlavorText {
+}
+
+.cardRarity {
+}
+/*
+    Comment text of an individual skill
+    */
+.cardSkillComment {
+    font-family: 'Helvetica';
+    font-size: 12px;
+    margin-left: 7px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 15px;
+}
+
+.scroll {
+    height: 100px;
+    overflow: auto;
+}
+
+/*
+    Shows high level information that can be seen at a quick glance, such as rarity and a picture
+    */
+.cardQuickGlanceWrapper {
+    float: left;
+}
+
+/*
+    Shows the title details of card stats
+    */
+.cardStatHeaders {
+    width: 360px;
+    clear: both;
+}
+/*
+    Shows the number values of card stats
+    */
+.cardStatData {
+    width: 360px;
+    clear: both;
+}
+
+/*
+    Details of the card's type and subtype
+    */
+
+
+.textnew1 {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-family: Times New Roman;
+    font-size: 13px;
+    margin: 0 0 0 0px;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+/*
+    One character data appearing in the spehere, such as a card's level
+    */
+.sphereBigText {
+    font-family: "Times New Roman",Times,serif;
+    text-align: center;
+    font-size: 54px;
+    line-height: 44px;
+    margin-top: 6px;
+}
+
+.glow {
+}
+
+/*
+    Explenation as to what the big text means, such as "Level" or "Lv."
+    */
+.sphereSmallText {
+    text-align: center;
+    font-size: 10px;
+    line-height: 0px;
+    font-weight: bold;
+    font-family: times;
+}
+
+
+.middleCellWidth {
+    width: 54px;
+}
+
+.statCell {
+    border-right: 1px inset black;
+    float: left;
+    background-color: white;
 }
 
 .firstCellWidth {
@@ -460,8 +971,10 @@ body {
 .tabbleBottom {
     height: 3px;
     background-color: transparent;
-    border-right:solid 1px black;float:left;
-    border-bottom:solid 1px black;float:left;
+    border-right: solid 1px black;
+    float: left;
+    border-bottom: solid 1px black;
+    float: left;
 }
 
 .tabbleBottomWidth {
@@ -473,4 +986,1030 @@ body {
 }
 
 .cardStatsHeader {
+}
+
+.cardFlavorText {
+    width: 387px;
+    font-size: 12px;
+    line-height: 15px;
+    padding-top: 2px;
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+.cardRarity {
+    font-family: times;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+. .rarityHR {
+    width: 200px;
+}
+
+h4 {
+    color: #000000;
+    font-family: times new roman;
+    font-size: 17px;
+    margin: 0 0 0 0px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.paddedTop {
+    padding-top: 1px;
+}
+
+.skillBoxRightCap {
+    float: right;
+    padding-right: 3px;
+    padding-top: 2px;
+}
+
+.notActive {
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    /* IE 5-7 */
+    filter: alpha(opacity=50);
+    /* Netscape */
+    -moz-opacity: 0.5;
+    /* Safari 1.x */
+    -khtml-opacity: 0.5;
+    /* Good browsers */
+    opacity: 0.5;
+}
+/*
+    Overall wrapper around entire card data. In this case, it shows a scroll
+    */
+.cardSkinWrapper {
+    background-image: url(/Content/images/detail-bg1.png);
+    width: 730px;
+    height: 462px;
+    background-repeat: no-repeat;
+    padding-left: 65px;
+    padding-top: 60px;
+    margin-top: 60px;
+}
+
+/*
+    Overall wrapper for the card's detailed stats
+    */
+.cardDeatilsWrapper {
+    float: left;
+    padding-left: 15px;
+}
+
+/*
+    Wraps the grid that contains the card's basestats
+    */
+.cardStatWrapper {
+    margin-top: -3px;
+    margin-left: 50px;
+    float: left;
+    text-align: center;
+}
+
+.skillTableWidth {
+    width: 387px;
+}
+
+/*
+Skill description is 16 px Helvetica Medium
+Flavor text is 20px Helvetica Medium
+Rarity is 20 px Times Roman
+Illustrator is 15px Times Roman
+All stats (HP, AT, ect) and their number values are 20px Times Roman
+Card type is 16 px Times Roman
+
+    */
+.cardTypeText {
+    font-family: 'Times Roman';
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cardTypePosition {
+    clear: both;
+    margin-left: -50px;
+    width: 386px;
+    margin-top: 2px;
+}
+
+.cardIllustrator {
+    font-family: 'Times New Roman';
+    font-size: 12px;
+    margin-top: -3px;
+    padding-bottom: 3px;
+}
+
+
+.cardSkillName {
+    font-family: 'Times New Roman';
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.cardStats {
+    font-family: 'Times New Roman';
+    font-size: 15px;
+}
+
+.cardStatsValue {
+    line-height: 25px;
+}
+
+.cardSkillSP {
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cardName {
+    font-family: 'Times';
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cardSkillDescription {
+}
+
+.cardFlavorText {
+}
+
+.cardRarity {
+}
+/*
+    Comment text of an individual skill
+    */
+.cardSkillComment {
+    font-family: 'Helvetica';
+    font-size: 12px;
+    margin-left: 7px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 15px;
+}
+
+.scroll {
+    height: 100px;
+    overflow: auto;
+}
+
+/*
+    Shows high level information that can be seen at a quick glance, such as rarity and a picture
+    */
+.cardQuickGlanceWrapper {
+    float: left;
+}
+
+/*
+    Shows the title details of card stats
+    */
+.cardStatHeaders {
+    width: 360px;
+    clear: both;
+}
+/*
+    Shows the number values of card stats
+    */
+.cardStatData {
+    width: 360px;
+    clear: both;
+}
+
+/*
+    Details of the card's type and subtype
+    */
+
+
+.textnew1 {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-family: Times New Roman;
+    font-size: 13px;
+    margin: 0 0 0 0px;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+/*
+    One character data appearing in the spehere, such as a card's level
+    */
+.sphereBigText {
+    font-family: "Times New Roman",Times,serif;
+    text-align: center;
+    font-size: 54px;
+    line-height: 44px;
+    margin-top: 6px;
+}
+
+.glow {
+}
+
+/*
+    Explenation as to what the big text means, such as "Level" or "Lv."
+    */
+.sphereSmallText {
+    text-align: center;
+    font-size: 10px;
+    line-height: 0px;
+    font-weight: bold;
+    font-family: times;
+}
+
+
+.middleCellWidth {
+    width: 54px;
+}
+
+.statCell {
+    border-right: 1px inset black;
+    float: left;
+    background-color: white;
+}
+
+.firstCellWidth {
+    width: 60px;
+    padding-left: 2px;
+}
+
+.lastCellWidth {
+    width: 52px;
+}
+
+
+
+/**********
+    Image Sprites
+    ******/
+
+.cardSprite {
+    background: url(/Content/images/CardSpriteSheet.png) no-repeat;
+    display: block;
+}
+
+.cardSprite-star {
+    width: 29px;
+    height: 30px;
+    background-position: -5px -5px;
+}
+
+.cardSprite-Skill-Refess {
+    height: 24px;
+    background-position: -5px -45px;
+}
+
+.cardSprite-Skill-Auto {
+    width: 69px;
+    height: 18px;
+    background-position: -44px -5px;
+}
+
+.cardSprite-Skill-Close {
+    width: 69px;
+    height: 18px;
+    background-position: -123px -5px;
+}
+
+.cardSprite-Skill-Gowen {
+    height: 24px;
+    background-position: -5px -79px;
+}
+
+.cardSprite-Skill-Lawtia {
+    height: 24px;
+    background-position: -5px -113px;
+}
+
+.cardSprite-Skill-Action {
+    width: 69px;
+    height: 18px;
+    background-position: -202px -5px;
+}
+
+
+.cardSprite-Skill-Falkow {
+    height: 24px;
+    background-position: -5px -147px;
+}
+
+.cardSprite-table-bg1-Gowen {
+    width: 12px;
+    height: 18px;
+    background-position: -281px -5px;
+    background-repeat: repeat-x;
+}
+
+.cardSprite-Skill-Open {
+    width: 69px;
+    height: 18px;
+    background-position: -303px -5px;
+}
+
+.cardSprite-numberSphere-Gowen {
+    width: 65px;
+    height: 64px;
+    background-position: -5px -181px;
+}
+
+.cardSprite-numberSphere-Falkow {
+    width: 65px;
+    height: 65px;
+    background-position: -80px -181px;
+}
+
+.cardSprite-numberSphere-Lawtia {
+    width: 66px;
+    height: 65px;
+    background-position: -155px -181px;
+}
+
+.cardSprite-numberSphere-Refess {
+    width: 66px;
+    height: 65px;
+    background-position: -231px -181px;
+}
+
+.cardSprite-Skill-Rank {
+    width: 69px;
+    height: 18px;
+    background-position: -307px -181px;
+}
+
+.cardSprite-Skill-Soul {
+    width: 69px;
+    height: 18px;
+    background-position: -307px -209px;
+}
+
+.cardSprite-Skill-Start {
+    width: 69px;
+    height: 18px;
+    background-position: -307px -237px;
+}
+
+.cardSprite-table-bg1-Falkow {
+    width: 12px;
+    height: 18px;
+    background-position: -5px -265px;
+}
+
+.cardSprite-table-bg1-Lawtia {
+    width: 12px;
+    height: 18px;
+    background-position: -27px -265px;
+}
+
+.cardSprite-table-bg1-Refess {
+    width: 12px;
+    height: 18px;
+    background-position: -49px -265px;
+}
+
+.cardSprite-Skill-Trait {
+    width: 69px;
+    height: 18px;
+    background-position: -71px -265px;
+}
+
+.repeaterSprite {
+    background: url(/Content/Images/RepeaterSprite.png) repeat-x;
+    display: block;
+}
+
+.repeaterSprite-Falkow {
+    height: 18px;
+    background-position: -0px -0px;
+}
+
+.repeaterSprite-Lawtia {
+    height: 18px;
+    background-position: -0px -18px;
+}
+
+.repeaterSprite-Gowen {
+    height: 18px;
+    background-position: -0px -36px;
+}
+
+.repeaterSprite-Refess {
+    height: 18px;
+    background-position: -0px -54px;
+}
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   speak for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+}
+
+body {
+    font-style: Palatino, Baskerville, Georgia, serif;
+    line-height: 18px;
+}
+
+    /* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+    body.loading {
+        overflow: hidden;
+    }
+
+        /* Anytime the body has the loading class, our
+   modal element will be visible */
+        body.loading .modal {
+            display: block;
+        }
+
+.tableSprite {
+    background: url(/Content/images/tableBottomRepeater.png);
+    display: block;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Falkow-statbar-bottom {
+    height: 3px;
+    background-position: -0px -0px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Gowen-statbar-bottom {
+    height: 3px;
+    background-position: -0px -3px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Lawtia-statbar-bottom {
+    height: 3px;
+    background-position: -0px -6px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Refess-statbar-bottom {
+    height: 3px;
+    background-position: -0px -9px;
+    background-repeat: repeat-x;
+}
+
+.tabbleBottom {
+    height: 3px;
+    background-color: transparent;
+    border-right: solid 1px black;
+    float: left;
+    border-bottom: solid 1px black;
+    float: left;
+}
+
+.tabbleBottomWidth {
+    max-width: 336px;
+}
+
+.tableBottomCellBorder {
+    border: solid 1px black;
+}
+
+.cardStatsHeader {
+}
+
+.cardFlavorText {
+    width: 387px;
+    font-size: 12px;
+    line-height: 15px;
+    padding-top: 2px;
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+.cardRarity {
+    font-family: times;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+. .rarityHR {
+    width: 200px;
+}
+
+h4 {
+    color: #000000;
+    font-family: times new roman;
+    font-size: 17px;
+    margin: 0 0 0 0px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.paddedTop {
+    padding-top: 1px;
+}
+
+.skillBoxRightCap {
+    float: right;
+    padding-right: 3px;
+    padding-top: 2px;
+}
+
+.notActive {
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    /* IE 5-7 */
+    filter: alpha(opacity=50);
+    /* Netscape */
+    -moz-opacity: 0.5;
+    /* Safari 1.x */
+    -khtml-opacity: 0.5;
+    /* Good browsers */
+    opacity: 0.5;
+}
+/*
+    Overall wrapper around entire card data. In this case, it shows a scroll
+    */
+.cardSkinWrapper {
+    background-image: url(/Content/images/detail-bg1.png);
+    width: 730px;
+    height: 462px;
+    background-repeat: no-repeat;
+    padding-left: 65px;
+    padding-top: 60px;
+    margin-top: 60px;
+}
+
+/*
+    Overall wrapper for the card's detailed stats
+    */
+.cardDeatilsWrapper {
+    float: left;
+    padding-left: 15px;
+}
+
+/*
+    Wraps the grid that contains the card's basestats
+    */
+.cardStatWrapper {
+    margin-top: -3px;
+    margin-left: 50px;
+    float: left;
+    text-align: center;
+}
+
+.skillTableWidth {
+    width: 387px;
+}
+
+/*
+Skill description is 16 px Helvetica Medium
+Flavor text is 20px Helvetica Medium
+Rarity is 20 px Times Roman
+Illustrator is 15px Times Roman
+All stats (HP, AT, ect) and their number values are 20px Times Roman
+Card type is 16 px Times Roman
+
+    */
+.cardTypeText {
+    font-family: 'Times Roman';
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cardTypePosition {
+    clear: both;
+    margin-left: -50px;
+    width: 386px;
+    margin-top: 2px;
+}
+
+.cardIllustrator {
+    font-family: 'Times New Roman';
+    font-size: 12px;
+    margin-top: -3px;
+    padding-bottom: 3px;
+}
+
+
+.cardSkillName {
+    font-family: 'Times New Roman';
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.cardStats {
+    font-family: 'Times New Roman';
+    font-size: 15px;
+}
+
+.cardStatsValue {
+    line-height: 25px;
+}
+
+.cardSkillSP {
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cardName {
+    font-family: 'Times';
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cardSkillDescription {
+}
+
+.cardFlavorText {
+}
+
+.cardRarity {
+}
+/*
+    Comment text of an individual skill
+    */
+.cardSkillComment {
+    font-family: 'Helvetica';
+    font-size: 12px;
+    margin-left: 7px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 15px;
+}
+
+.scroll {
+    height: 100px;
+    overflow: auto;
+}
+
+/*
+    Shows high level information that can be seen at a quick glance, such as rarity and a picture
+    */
+.cardQuickGlanceWrapper {
+    float: left;
+}
+
+/*
+    Shows the title details of card stats
+    */
+.cardStatHeaders {
+    width: 360px;
+    clear: both;
+}
+/*
+    Shows the number values of card stats
+    */
+.cardStatData {
+    width: 360px;
+    clear: both;
+}
+
+/*
+    Details of the card's type and subtype
+    */
+
+
+.textnew1 {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-family: Times New Roman;
+    font-size: 13px;
+    margin: 0 0 0 0px;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+/*
+    One character data appearing in the spehere, such as a card's level
+    */
+.sphereBigText {
+    font-family: "Times New Roman",Times,serif;
+    text-align: center;
+    font-size: 54px;
+    line-height: 44px;
+    margin-top: 6px;
+}
+
+.glow {
+}
+
+/*
+    Explenation as to what the big text means, such as "Level" or "Lv."
+    */
+.sphereSmallText {
+    text-align: center;
+    font-size: 10px;
+    line-height: 0px;
+    font-weight: bold;
+    font-family: times;
+}
+
+
+.middleCellWidth {
+    width: 54px;
+}
+
+.statCell {
+    border-right: 1px inset black;
+    float: left;
+    background-color: white;
+}
+
+.firstCellWidth {
+    width: 60px;
+    padding-left: 2px;
+}
+
+.lastCellWidth {
+    width: 52px;
+}
+
+
+
+/**********
+    Image Sprites
+    ******/
+
+.cardSprite {
+    background: url(/Content/images/CardSpriteSheet.png) no-repeat;
+    display: block;
+}
+
+.cardSprite-star {
+    width: 29px;
+    height: 30px;
+    background-position: -5px -5px;
+}
+
+.cardSprite-Skill-Refess {
+    height: 24px;
+    background-position: -5px -45px;
+}
+
+.cardSprite-Skill-Auto {
+    width: 69px;
+    height: 18px;
+    background-position: -44px -5px;
+}
+
+.cardSprite-Skill-Close {
+    width: 69px;
+    height: 18px;
+    background-position: -123px -5px;
+}
+
+.cardSprite-Skill-Gowen {
+    height: 24px;
+    background-position: -5px -79px;
+}
+
+.cardSprite-Skill-Lawtia {
+    height: 24px;
+    background-position: -5px -113px;
+}
+
+.cardSprite-Skill-Action {
+    width: 69px;
+    height: 18px;
+    background-position: -202px -5px;
+}
+
+
+.cardSprite-Skill-Falkow {
+    height: 24px;
+    background-position: -5px -147px;
+}
+
+.cardSprite-table-bg1-Gowen {
+    width: 12px;
+    height: 18px;
+    background-position: -281px -5px;
+    background-repeat: repeat-x;
+}
+
+.cardSprite-Skill-Open {
+    width: 69px;
+    height: 18px;
+    background-position: -303px -5px;
+}
+
+.cardSprite-numberSphere-Gowen {
+    width: 65px;
+    height: 64px;
+    background-position: -5px -181px;
+}
+
+.cardSprite-numberSphere-Falkow {
+    width: 65px;
+    height: 65px;
+    background-position: -80px -181px;
+}
+
+.cardSprite-numberSphere-Lawtia {
+    width: 66px;
+    height: 65px;
+    background-position: -155px -181px;
+}
+
+.cardSprite-numberSphere-Refess {
+    width: 66px;
+    height: 65px;
+    background-position: -231px -181px;
+}
+
+.cardSprite-Skill-Rank {
+    width: 69px;
+    height: 18px;
+    background-position: -307px -181px;
+}
+
+.cardSprite-Skill-Soul {
+    width: 69px;
+    height: 18px;
+    background-position: -307px -209px;
+}
+
+.cardSprite-Skill-Start {
+    width: 69px;
+    height: 18px;
+    background-position: -307px -237px;
+}
+
+.cardSprite-table-bg1-Falkow {
+    width: 12px;
+    height: 18px;
+    background-position: -5px -265px;
+}
+
+.cardSprite-table-bg1-Lawtia {
+    width: 12px;
+    height: 18px;
+    background-position: -27px -265px;
+}
+
+.cardSprite-table-bg1-Refess {
+    width: 12px;
+    height: 18px;
+    background-position: -49px -265px;
+}
+
+.cardSprite-Skill-Trait {
+    width: 69px;
+    height: 18px;
+    background-position: -71px -265px;
+}
+
+.repeaterSprite {
+    background: url(/Content/Images/RepeaterSprite.png) repeat-x;
+    display: block;
+}
+
+.repeaterSprite-Falkow {
+    height: 18px;
+    background-position: -0px -0px;
+}
+
+.repeaterSprite-Lawtia {
+    height: 18px;
+    background-position: -0px -18px;
+}
+
+.repeaterSprite-Gowen {
+    height: 18px;
+    background-position: -0px -36px;
+}
+
+.repeaterSprite-Refess {
+    height: 18px;
+    background-position: -0px -54px;
+}
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   speak for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+}
+
+body {
+    font-style: Palatino, Baskerville, Georgia, serif;
+    line-height: 18px;
+}
+
+    /* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+    body.loading {
+        overflow: hidden;
+    }
+
+        /* Anytime the body has the loading class, our
+   modal element will be visible */
+        body.loading .modal {
+            display: block;
+        }
+
+.tableSprite {
+    background: url(/Content/images/tableBottomRepeater.png);
+    display: block;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Falkow-statbar-bottom {
+    height: 3px;
+    background-position: -0px -0px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Gowen-statbar-bottom {
+    height: 3px;
+    background-position: -0px -3px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Lawtia-statbar-bottom {
+    height: 3px;
+    background-position: -0px -6px;
+    background-repeat: repeat-x;
+}
+
+.tableSprite-Refess-statbar-bottom {
+    height: 3px;
+    background-position: -0px -9px;
+    background-repeat: repeat-x;
+}
+
+.tabbleBottom {
+    height: 3px;
+    background-color: transparent;
+    border-right: solid 1px black;
+    float: left;
+    border-bottom: solid 1px black;
+    float: left;
+}
+
+.tabbleBottomWidth {
+    max-width: 336px;
+}
+
+.tableBottomCellBorder {
+    border: solid 1px black;
+}
+
+.cardStatsHeader {
+}
+
+.cardFlavorText {
+    width: 387px;
+    font-size: 12px;
+    line-height: 15px;
+    padding-top: 2px;
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+.cardRarity {
+    font-family: times;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+.rarityHR {
+    width: 200px;
+    background-color:black;    
+    height:20px;
+    border:solid 1px double;
 }

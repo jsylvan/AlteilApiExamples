@@ -73,6 +73,10 @@ CardController = function ($scope, $resource) {
             method: 'JSONP',
         },
     });
+    $scope.refreshCard = function () {
+        alert('Refreshing');
+        $scope.loadCard($scope.strID);
+    };
 
     $scope.loadCard = function (id) {
         me = this;
@@ -83,14 +87,6 @@ CardController = function ($scope, $resource) {
 
     };
 
-    $scope.fetch = function () {
-        me = this;
-        this.Loading = "loading";
-        this.card = this.Activity.get({
-            cardID: 62
-        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); });
-
-    };
     $scope.getSkills = function () {
 
         if (!this.card) {
@@ -116,39 +112,14 @@ CardController = function ($scope, $resource) {
         return $scope.ToolTips[skill.replace(/\s+/g, '')];
     }
 
-    $scope.getAllegianceTip = function (skill) {
-        if (skill === 'Start')
-            return $scope.ToolTips.start;
-
-        if (skill === 'Open')
-            return $scope.ToolTips.open;
-
-        if (skill === 'Auto')
-            return $scope.ToolTips.auto;
-
-        if (skill === 'Action')
-            return $scope.ToolTips.action;
-
-        if (skill === 'Counter')
-            return $scope.ToolTips.counter;
-
-        if (skill === 'Close')
-            return $scope.ToolTips.close;
-
-        if (skill === 'Soul')
-            return $scope.ToolTips.soul;
-
-        return skill;
-    }
-
     $scope.toolTip = function (tip) {
         alert(tip);
         return { title: tip };
-    };
-
-    $scope.loadCard(getQueryVariable("id"));
+    };    
+    $scope.strID = getQueryVariable("id");
+    $scope.loadCard($scope.strID);    
 };
-;
+
 
 
 
@@ -165,5 +136,3 @@ function getQueryVariable(variable) {
     }
     console.log('Query variable %s not found', variable);
 }
-
-

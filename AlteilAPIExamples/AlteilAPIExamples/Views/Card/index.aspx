@@ -20,23 +20,31 @@
     <script src="/Scripts/bootstrap.min.js"></script>
     <script src="/Scripts/Card/CardApp.js"></script>
 
-     <title>
-	Alteil Card Details: {{card.Name}}
-</title></head>
+    <title>Alteil Card Details: {{card.Name}}
+    </title>
+</head>
 
 <body class="{{Loading}}">
     <div id="main" class="cardSkinWrapper" ng-show="card.Name">
         <div class="cardQuickGlanceWrapper">
             <img ng-src="{{card.ImageURL}}" title="{{card.FlavorText.Text1}}" />
-            <div style="background: none repeat 0 0 transparent; border: 0 none; font-size: 15px; margin: 0; outline: 0 none; padding: 0; vertical-align: baseline;" title="{{ToolTips.Rarity}}" ng-repeat="rarity in Rarity">
-                <div style="float: left;" class="cardSprite cardSprite-star"></div>
+            <div class="cardRarity">
+                Rarity
+            </div>
+            <div class="rarityHR" style="width: 200px; background-color: black; height: 1px; border: solid 1px double;">
+            </div>
+            <div style="">
+                <div style="background: none repeat 0 0 transparent; border: 0 none; font-size: 15px; margin: 0; outline: 0 none; padding: 0; padding-left: 4px; vertical-align: baseline;" title="{{ToolTips.Rarity}}" ng-repeat="rarity in Rarity">
+                    <div style="float: left;" class="cardSprite cardSprite-star"></div>
+                </div>
             </div>
         </div>
 
         <div id="cardDeatilsWrapper" class="cardDeatilsWrapper">
-            <div style="width: 382px;padding-left:7px;">
+            <div style="width: 382px; padding-left: 7px;">
                 <div style="float: left;">
-                    <div title="{{card.FlavorText.Text2}}" class="cardName">{{card.Name}}
+                    <div title="{{card.FlavorText.Text2}}" class="cardName">
+                        {{card.Name}}
                     </div>
                     <p class="cardIllustrator">
                         ILLUSTRATOR : {{card.Illustrator}}
@@ -44,7 +52,8 @@
                 </div>
 
             </div>
-            <div class="cardStatWrapper" >
+
+            <div class="cardStatWrapper">
                 <div class="cardStatHeaders">
                     <div title="{{ToolTips.HP}}" class="statCell firstCellWidth repeaterSprite repeaterSprite-{{card.Sphere}} cardStats cardStatsHeader">
                         HP
@@ -106,69 +115,73 @@
                         --
                     </div>
                 </div>
-                <div class="cardStatData tabbleBottomWidth" >
-                      <div class="firstCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom" >
-                        
+                <div class="cardStatData tabbleBottomWidth">
+                    <div class="firstCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom">
                     </div>
                     <div class="middleCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom">
-                        
                     </div>
                     <div class="middleCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom">
-                        
                     </div>
                     <div class="middleCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom">
-                        
                     </div>
                     <div class="middleCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom">
-                        
                     </div>
                     <div class="lastCellWidth tabbleBottom tableSprite tableSprite-{{card.Sphere}}-statbar-bottom notActive">
-                        
                     </div>
                 </div>
                 <div class="cardTypeText cardTypePosition">
-                    <div class="" style="text-align:right;"><span title="{{getToolTip(card.MultiSphere)}}">{{card.MultiSphere}} </span><span title="{{ToolTips.CardType}}">Card Type</span>: <span ng-hide="card.SubType1">None</span><span title="{{getToolTip(card.SubType1)}}">{{card.SubType1}}</span>  / <span ng-hide="card.SubType2">None</span> <span title="{{getToolTip(card.SubType2)}}">{{card.SubType2}}</span> </div>
-                    <div class="" style="text-align:right;line-height:10px;padding-bottom:9px;"><span title="{{getToolTip(card.CardType)}}">{{card.CardType}}</span><span title="{{getToolTip(card.UnitType)}}" ng-hide="card.CardType == 'Grimoire' || card.UnitType != 'Character'">: {{card.UnitType}}</span></div>
+                    <div class="" style="text-align: right;"><span title="{{getToolTip(card.MultiSphere)}}">{{card.MultiSphere}} </span><span title="{{ToolTips.CardType}}">Card Type</span>: <span ng-hide="card.SubType1">None</span><span title="{{getToolTip(card.SubType1)}}">{{card.SubType1}}</span>  / <span ng-hide="card.SubType2">None</span> <span title="{{getToolTip(card.SubType2)}}">{{card.SubType2}}</span> </div>
+                    <div class="" style="text-align: right; line-height: 10px; padding-bottom: 9px;"><span title="{{getToolTip(card.CardType)}}">{{card.CardType}}</span><span title="{{getToolTip(card.UnitType)}}" ng-hide="card.CardType == 'Grimoire' || card.UnitType != 'Character'">: {{card.UnitType}}</span></div>
                 </div>
             </div>
 
-            <div title="{{ToolTips.LV}}" class="cardSprite cardSprite-numberSphere-{{card.Sphere}}" style="float: left; margin-left: -410px;margin-top:-10px;">
+            <div title="{{ToolTips.LV}}" class="cardSprite cardSprite-numberSphere-{{card.Sphere}}" style="float: left; margin-left: -410px; margin-top: -10px;">
                 <div class="sphereBigText">{{card.BaseStats.Level}}</div>
                 <div class="sphereSmallText">
                     LV.
                 </div>
             </div>
+            <div class="scrollPane">
+                <div class="textnew1" style="clear: both; width: 387px; text-align: right;">
+                </div>
+                <div ng-repeat="skill in Skills" ng-show="skill">
+                    <div ng-class="skill.Type == 'Soul' && 'notActive' || ''">
+                        <div class="paddedTop cardSprite cardSprite-Skill-{{card.Sphere}}" style="clear: both; padding-left: 8px;">
+                            <div title="{{getToolTip(skill.Type)}}" class="cardSprite cardSprite-Skill-{{skill.Type}} skillTableWidth" style="float: left; margin-top: 2px;"></div>
+                            <div class="cardSkillName glow" style="float: left; vertical-align: middle; text-transform: uppercase; padding-left: 6px; padding-top: 2px;">
+                                {{skill.Name}}           
+                            </div>
+                            <div class="skillBoxRightCap">
 
-            <div class="textnew1" style="clear: both; width: 387px; text-align: right;">
-            </div>
-            <div ng-repeat="skill in Skills" ng-show="skill">
-                <div ng-class="skill.Type == 'Soul' && 'notActive' || ''">
-                    <div class="paddedTop cardSprite cardSprite-Skill-{{card.Sphere}}" style="clear: both; padding-left: 8px;">
-                        <div title="{{getToolTip(skill.Type)}}" class="cardSprite cardSprite-Skill-{{skill.Type}} skillTableWidth" style="float: left; margin-top: 2px;"></div>
-                        <div class="cardSkillName glow" style="float: left; vertical-align: middle; text-transform: uppercase; padding-left: 6px; padding-top: 2px;">
-                            {{skill.Name}}           
-                        </div>
-                        <div class="skillBoxRightCap">
-
-                            <div class="cardSkillSP" data-original-title="{{ToolTips.SP}}" style="background-color: black; float: right; height: 16px; overflow:hidden; margin-right: 26px; margin-top: 0px; ">
-                                <img src="/Content/images/sp.gif" alt="SP" style="margin-top: -2px;" />
-                                SP <span style="">{{skill.SP}}
-                                </span>
+                                <div class="cardSkillSP" data-original-title="{{ToolTips.SP}}" style="background-color: black; float: right; height: 16px; overflow: hidden; margin-right: 30px; margin-top: 0px;">
+                                    <img src="/Content/images/sp.gif" alt="SP" style="margin-top: -2px;" />
+                                    SP <span style="">{{skill.SP}}
+                                    </span>
+                                </div>
                             </div>
                         </div>
+                        <div class="cardSkillComment skillTableWidth">
+                            {{skill.Comment}}
+                        </div>
+                        <script>
+                            $('*').tooltip();
+                        </script>
                     </div>
-                    <div class="cardSkillComment skillTableWidth">
-                        {{skill.Comment}}
-                    </div>
-                    <script>
-                        $('*').tooltip();
-                    </script>
                 </div>
+                <div class="cardFlavorText">
+                    {{card.FlavorText.Text2}}
+                </div>
+
             </div>
         </div>
     </div>
-<script>
+    <!-- Sample of how to load new cards -->
+    <div style="display:none;">        
+        <input id="cardNumber" ng-model="strID" />
+        <a id="cardLoader" ng-click="loadCard(strID)">Load card #{{strID}}</a>
+    </div>
+    <script>
+        $('*').tooltip();
 
-    $('*').tooltip();
-    </script>
+    </script>
 </html>
