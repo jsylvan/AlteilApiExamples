@@ -21,6 +21,12 @@ namespace AlteilAPIExamples.Controllers
             return View();
         }
 
+
+        public ActionResult Starter()
+        {
+            return View();
+        }
+
         
     }
 }

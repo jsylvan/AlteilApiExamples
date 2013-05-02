@@ -21,7 +21,7 @@
     </title>
 </head>
 
-<body class="{{Loading}}">
+<body class="{{Loading}}">    
     <div id="main" class="cardSkinWrapper" ng-show="card.Name">
         <div class="cardQuickGlanceWrapper">
             <img ng-src="{{card.ImageURL}}" title="{{card.FlavorText.Text1}}" />

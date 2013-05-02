@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/AlteilAPIExamples.dll">
-      <publishTime>04/29/2013 14:05:24</publishTime>
+      <publishTime>05/02/2013 13:20:10</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>04/06/2013 20:13:45</publishTime>
@@ -64,6 +64,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/angular-ui.min.css">
       <publishTime>04/07/2013 15:03:16</publishTime>
     </File>
+    <File Include="Content/avgrund.css">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
     <File Include="Content/bootstrap-responsive.css">
       <publishTime>04/06/2013 11:28:18</publishTime>
     </File>
@@ -75,6 +78,78 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/bootstrap.min.css">
       <publishTime>04/06/2013 11:28:18</publishTime>
+    </File>
+    <File Include="Content/Browse.css">
+      <publishTime>05/02/2013 12:31:19</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/20-cards.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Beast-King-Rivera.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Cassandra.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Dragon-of-the-Mercurial-Night.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Eskatia.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Extension.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Femiel.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Fire-Dragon.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Folrart-Spear-Knight.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Garfath.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Magic-Doll.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Mermaid-Soldier.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Metia.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Novice-Assassin.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Orthos.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Rapier-Fencer-of-Regus.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/River-of-Fire.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Roc.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/small-star.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/True-Retear.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Verlaat.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/view-card-list.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
+    <File Include="Content/images/browse cards/Zalzagul.png">
+      <publishTime>05/02/2013 10:54:35</publishTime>
     </File>
     <File Include="Content/images/CardSpriteSheet.png">
       <publishTime>04/06/2013 15:52:03</publishTime>
@@ -97,6 +172,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/images/tableBottomRepeater.png">
       <publishTime>04/29/2013 13:50:35</publishTime>
     </File>
+    <File Include="Content/images/viewfullcardlist.png">
+      <publishTime>05/02/2013 12:01:13</publishTime>
+    </File>
     <File Include="Content/select2.css">
       <publishTime>04/07/2013 15:03:16</publishTime>
     </File>
@@ -107,7 +185,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/07/2013 15:03:16</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>04/29/2013 14:03:32</publishTime>
+      <publishTime>05/02/2013 11:02:56</publishTime>
     </File>
     <File Include="Content/spinner.gif">
       <publishTime>04/07/2013 15:03:16</publishTime>
@@ -370,8 +448,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/bootstrap.min.js">
       <publishTime>04/06/2013 11:28:18</publishTime>
     </File>
+    <File Include="Scripts/Card/BrowseApp.js">
+      <publishTime>05/02/2013 12:46:12</publishTime>
+    </File>
     <File Include="Scripts/Card/CardApp.js">
-      <publishTime>04/29/2013 12:59:13</publishTime>
+      <publishTime>04/30/2013 19:36:00</publishTime>
     </File>
     <File Include="Scripts/i18n/angular-locale_am-et.js">
       <publishTime>04/06/2013 11:26:49</publishTime>
@@ -853,6 +934,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/jquery-ui-1.10.2.min.js">
       <publishTime>04/06/2013 20:13:23</publishTime>
     </File>
+    <File Include="Scripts/jquery.avgrund.js">
+      <publishTime>05/02/2013 10:54:35</publishTime>
+    </File>
     <File Include="Scripts/jquery.unobtrusive-ajax.js">
       <publishTime>04/06/2013 20:13:56</publishTime>
     </File>
@@ -901,8 +985,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/_references.js">
       <publishTime>04/06/2013 11:28:18</publishTime>
     </File>
+    <File Include="Views/Card/browse.aspx">
+      <publishTime>05/02/2013 12:45:14</publishTime>
+    </File>
     <File Include="Views/Card/index.aspx">
-      <publishTime>04/29/2013 14:05:05</publishTime>
+      <publishTime>05/02/2013 11:47:19</publishTime>
     </File>
     <File Include="Views/Home/index.aspx">
       <publishTime>04/06/2013 11:12:14</publishTime>
@@ -914,7 +1001,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/06/2013 11:07:11</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/29/2013 14:14:51</publishTime>
+      <publishTime>05/02/2013 13:20:10</publishTime>
     </File>
   </ItemGroup>
 </Project>

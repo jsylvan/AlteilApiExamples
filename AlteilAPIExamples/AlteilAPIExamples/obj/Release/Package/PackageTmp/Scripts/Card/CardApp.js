@@ -73,17 +73,13 @@ CardController = function ($scope, $resource) {
             method: 'JSONP',
         },
     });
-    $scope.refreshCard = function () {
-        alert('Refreshing');
-        $scope.loadCard($scope.strID);
-    };
 
     $scope.loadCard = function (id) {
         me = this;
         this.Loading = "loading";
         this.card = this.Activity.get({
             cardID: id
-        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); });
+        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); $scope.Rarity = [1, 2, 3, 4]; });
 
     };
 
@@ -95,7 +91,8 @@ CardController = function ($scope, $resource) {
         return [this.card.Skills.Skill0,
           this.card.Skills.Skill1,
           this.card.Skills.Skill2,
-          this.card.Skills.Skill3];
+          this.card.Skills.Skill3,
+        this.card.Skills.Soul];
     };
 
     $scope.getCardTypeTip = function (cardType) {
@@ -109,17 +106,16 @@ CardController = function ($scope, $resource) {
     }
 
     $scope.getToolTip = function (skill) {
+        if (skill == null) {
+            return "";
+        }
         return $scope.ToolTips[skill.replace(/\s+/g, '')];
-    }
-
-    $scope.toolTip = function (tip) {
-        alert(tip);
-        return { title: tip };
-    };    
+    }   
     $scope.strID = getQueryVariable("id");
-    $scope.loadCard($scope.strID);    
+    $scope.loadCard($scope.strID);
+    
 };
-
+;
 
 
 
@@ -136,3 +132,5 @@ function getQueryVariable(variable) {
     }
     console.log('Query variable %s not found', variable);
 }
+
+

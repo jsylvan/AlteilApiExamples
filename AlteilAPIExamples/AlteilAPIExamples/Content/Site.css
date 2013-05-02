@@ -403,7 +403,7 @@ Card type is 16 px Times Roman
     background-position: -0px -54px;
 }
 
-/* Start by setting display:none to make this hidden.
+/* Start by setting display:none to make cthis hidden.
    Then we position it in relation to the viewport window
    with position:fixed. Width, height, top and left speak
    speak for themselves. Background we set to 80% white with
@@ -549,7 +549,7 @@ body {
     background-repeat: no-repeat;
     padding-left: 65px;
     padding-top: 60px;
-    margin-top: 60px;
+  
 }
 
 /*
