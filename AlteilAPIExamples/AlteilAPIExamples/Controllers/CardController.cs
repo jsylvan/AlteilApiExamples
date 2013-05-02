@@ -15,7 +15,11 @@ namespace AlteilAPIExamples.Controllers
         {
             return View();
         }
-
+        
+        public ActionResult Browse()
+        {
+            return View();
+        }
 
         
     }

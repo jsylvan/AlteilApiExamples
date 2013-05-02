@@ -4,10 +4,7 @@
 
 <html ng-app="myApp" ng-controller="CardController">
 <head runat="server">
-    <meta name="viewport" content="width=device-width" />
-    <script>
-        var cardID = 66;
-    </script>
+    <meta name="viewport" content="width=device-width" />    
     <!--link href="/Content/themes/base/minified/jquery-ui.min.css" rel="stylesheet" /-->
     <link href="/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="/Content/bootstrap-responsive.min.css" rel="stylesheet" />
