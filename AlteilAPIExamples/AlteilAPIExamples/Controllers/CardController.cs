@@ -22,7 +22,12 @@ namespace AlteilAPIExamples.Controllers
         }
 
 
-        public ActionResult Starter()
+        public ActionResult Starters()
+        {
+            return View();
+        }
+
+        public ActionResult File()
         {
             return View();
         }

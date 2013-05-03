@@ -21,7 +21,7 @@
     </title>
 </head>
 
-<body class="{{Loading}}">    
+<body class="{{Loading}}" style="overflow: hidden">    
     <div id="main" class="cardSkinWrapper" ng-show="card.Name">
         <div class="cardQuickGlanceWrapper">
             <img ng-src="{{card.ImageURL}}" title="{{card.FlavorText.Text1}}" />
@@ -40,7 +40,7 @@
         <div id="cardDeatilsWrapper" class="cardDeatilsWrapper">
             <div style="width: 382px; padding-left: 7px;">
                 <div style="float: left;">
-                    <div title="{{card.FlavorText.Text2}}" class="cardName">
+                    <div class="cardName">
                         {{card.Name}}
                     </div>
                     <p class="cardIllustrator">

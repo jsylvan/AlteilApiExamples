@@ -3,6 +3,19 @@ body {
     line-height: 18px;
     background-color:transparent;
 }
+
+img.no-resize {
+  height: 172px;
+  width: 124px;
+  min-height: 172px;
+  min-width: 124px;
+}
+
+.cardCell{
+    width:20%;
+    float:left;
+}
+
 .iframeHack {
     margin-top:235px;
 }
