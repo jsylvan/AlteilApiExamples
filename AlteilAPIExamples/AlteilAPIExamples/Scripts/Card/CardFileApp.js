@@ -10,9 +10,10 @@ CardFileController = function ($scope, $resource) {
 
     $scope.Sphere = getParameterByName('starter'); //Todo: Use a directive
     $scope.selectedCardID = getParameterByName('activeCard');
-    $scope.setSelectedCardID = function (cardID) {
+    $scope.setSelectedCardID = function (cardID, area) {
         //TODO: Communicate with iframed directly instead of full refresh. SignlaR or direct javascript calls (requires same domain).
         $scope.selectedCardID = cardID;
+        $scope.area = area;
     };    
 };
 
