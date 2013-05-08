@@ -17,13 +17,13 @@
     <script src="/Scripts/angular-resource.js"></script>
     <script src="/Scripts/angular-ui.js"></script>
     <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/Card/BrowseApp.js"></script>    
+    <script src="/Scripts/Card/BrowseApp.js"></script>
     <title>Browse Cards</title>
 </head>
 <body>
-    <div class="iframeHack">
-        <center>
-               <div class="spacer"></div>
+    <div class="iframeHack" />
+
+    <center>    
         <div class="browseWrapper">          
             <div class="row-fluid">
                 <div class="span6">
@@ -55,18 +55,18 @@
                 </div>
             </div>
         </div>
-    <div class="spacer"></div>
-    <div class="spacer"></div>
-    <a href="http://www.alteil.com/index.php/card-list" target="_blank">
-        <img src="/Content/images/viewfullcardlist.png" /></a>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <a href="http://www.alteil.com/index.php/card-list" target="_blank">
+            <img src="/Content/images/viewfullcardlist.png" /></a>
     </center>
-        <!-- popup form #2 -->
-        <a href="#x" class="overlay" id="join_form"></a>
-        <div class="popup">
-            <iframe src="/Card?id={{selectedCard.id}}" style="width: 800px; height: 600px;" frameborder="0"></iframe>
+    <!-- popup form #2 -->
+    <a href="#x" class="overlay" id="join_form"></a>
+    <div class="popup">
+        <iframe src="/Card?id={{selectedCard.id}}" style="width: 800px; height: 600px;" frameborder="0"></iframe>
 
-            <a class="close" href="#close"></a>
-        </div>
+        <a class="close" href="#close"></a>
     </div>
+
 </body>
 </html>

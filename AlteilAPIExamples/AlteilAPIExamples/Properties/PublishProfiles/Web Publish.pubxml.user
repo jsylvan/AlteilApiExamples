@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/AlteilAPIExamples.dll">
-      <publishTime>05/02/2013 13:20:10</publishTime>
+      <publishTime>05/04/2013 10:17:14</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>04/06/2013 20:13:45</publishTime>
@@ -80,7 +80,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/06/2013 11:28:18</publishTime>
     </File>
     <File Include="Content/Browse.css">
-      <publishTime>05/02/2013 12:31:19</publishTime>
+      <publishTime>05/05/2013 19:14:03</publishTime>
     </File>
     <File Include="Content/images/browse cards/20-cards.png">
       <publishTime>05/02/2013 10:54:35</publishTime>
@@ -157,6 +157,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/images/detail-bg1.png">
       <publishTime>04/06/2013 14:50:32</publishTime>
     </File>
+    <File Include="Content/images/firestorm-banner.jpg">
+      <publishTime>05/02/2013 14:49:07</publishTime>
+    </File>
     <File Include="Content/images/glyphicons-halflings-white.png">
       <publishTime>04/06/2013 11:28:18</publishTime>
     </File>
@@ -168,6 +171,252 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/images/sp.gif">
       <publishTime>04/07/2013 15:19:52</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Aqua-Sorcerer.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/blue-skill-bar.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/blue-stats.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Deep-Squid.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Eagle-Soldier.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Elite-Fencer-of-Regus.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Giant-Manta-Ray.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Haste-Soldier.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Leviathan.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Owl-Sage.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Pirate-Crewman.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Return.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Sea-Hunter.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Sorcerer-Monk-of-Regus.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/soul-cards.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Sweeping-Tidalwave.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Sylph.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Undine.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/unit-cards.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Witch.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Falkow/Withdrawal-Strategy.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Alraune.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Ball-of-Flame.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Bear-Killing-Axeman.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Bellydancer.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Dryad-Soldier.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Efreet.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Exploding-Spores.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Fire-Arrow.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Fire-Storm-Wyvern.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Folrart-Guardian.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Gaia-Anaconda.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Giant-Ork.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Heierrat-Dual-Gunslinger.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Man-Eating-Tiger.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Mercenary.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/red-skill-bar.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/red-stats.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Salamander.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Samurai-Lady.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/soul-cards.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/unit-cards.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Gowen/Volcano-Wyvern.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Assassin.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Consuming-Grudge.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Crest-Halberd-Soldier.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Hell-Smoke.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Lycanthrope-[Janus].png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Mad-Priest.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Magic-Doll--Lycanthrope-.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Magic-Doll--Melee-.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Magic-Doll--Mini-.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Pure-Terror.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Shade.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Shadow-Hound.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Skeleton-Archer.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Skeleton-Master.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/soul-cards.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Succubus.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/unit-cards.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Lawtia/Zombie-Lord.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Bond-With-the-Fallen.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Boy-Combat-Priest.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Brutal-Mammoth.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Cait-Sith.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Folrart-Charge-Knight.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Folrart-Guardian.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Folrart-Knight-Captain.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Folrart-Spear-Knight.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Folrart-Unicorn-Knight.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Kesaran-Pasaran.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Light-Magic-Archer.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Lycanthrope-[Hanuman].png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Phoenix.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Recovery-Powder.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Safiria.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/soul-cards.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Sunlight-Knight.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/unit-cards.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/Will-o%27-the-Wisp.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/yellow-skill-bar.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
+    </File>
+    <File Include="Content/images/starter files/Refess/yellow-stats.png">
+      <publishTime>05/02/2013 15:23:16</publishTime>
     </File>
     <File Include="Content/images/tableBottomRepeater.png">
       <publishTime>04/29/2013 13:50:35</publishTime>
@@ -185,7 +434,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/07/2013 15:03:16</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>05/02/2013 11:02:56</publishTime>
+      <publishTime>05/02/2013 14:54:45</publishTime>
     </File>
     <File Include="Content/spinner.gif">
       <publishTime>04/07/2013 15:03:16</publishTime>
@@ -453,6 +702,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/Card/CardApp.js">
       <publishTime>04/30/2013 19:36:00</publishTime>
+    </File>
+    <File Include="Scripts/Card/CardFileApp.js">
+      <publishTime>05/03/2013 19:14:57</publishTime>
     </File>
     <File Include="Scripts/i18n/angular-locale_am-et.js">
       <publishTime>04/06/2013 11:26:49</publishTime>
@@ -986,10 +1238,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/06/2013 11:28:18</publishTime>
     </File>
     <File Include="Views/Card/browse.aspx">
-      <publishTime>05/02/2013 12:45:14</publishTime>
+      <publishTime>05/05/2013 19:01:11</publishTime>
+    </File>
+    <File Include="Views/Card/File.aspx">
+      <publishTime>05/04/2013 10:11:22</publishTime>
     </File>
     <File Include="Views/Card/index.aspx">
-      <publishTime>05/02/2013 11:47:19</publishTime>
+      <publishTime>05/03/2013 18:02:19</publishTime>
+    </File>
+    <File Include="Views/Card/Starters.aspx">
+      <publishTime>05/05/2013 18:50:44</publishTime>
     </File>
     <File Include="Views/Home/index.aspx">
       <publishTime>04/06/2013 11:12:14</publishTime>
@@ -1001,7 +1259,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/06/2013 11:07:11</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/02/2013 13:20:10</publishTime>
+      <publishTime>05/08/2013 14:14:02</publishTime>
     </File>
   </ItemGroup>
 </Project>
