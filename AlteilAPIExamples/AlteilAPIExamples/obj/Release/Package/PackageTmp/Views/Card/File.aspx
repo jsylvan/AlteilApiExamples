@@ -24,7 +24,7 @@
 <body style="background-color: transparent;">
     <div style="width: 90%; max-width: 1235px; margin: 0 auto;">
         <div style="float: left;">
-            <iframe ng-src="/Card?id={{selectedCardID}}" style="overflow-x: hidden; width: 755px; height: 480px;" frameborder="0"></iframe>
+            <iframe ng-src="/Card?id={{selectedCardID}}&area={{area}}" style="overflow-x: hidden; width: 755px; height: 480px;" frameborder="0"></iframe>
         </div>
         <div style="float: left;">
             <div class="top-zone" style="width: 477px; max-width: 477px;">
@@ -249,53 +249,53 @@
                     <div class="center-centents1">
                         <div style="background-image: url('/Content/images/starter files/{{Sphere}}/soul-cards.png'); height: 84px; width: 269px; padding-top: 40px; padding-left: 17px;">
                             <div ng-show="Sphere == 'Refess'">
-                                <a id="109" ng-click="setSelectedCardID(109);" href="#">
+                                <a id="109" ng-click="setSelectedCardID(109, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Refess/Boy-Combat-Priest.png" alt="image " /></a>
-                                <a id="1684" ng-click="setSelectedCardID(1684);" href="#">
+                                <a id="1684" ng-click="setSelectedCardID(1684, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Refess/Brutal-Mammoth.png" alt="image " /></a>
-                                <a id="1685" ng-click="setSelectedCardID(1685);" href="#">
+                                <a id="1685" ng-click="setSelectedCardID(1685, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Refess/Lycanthrope-[Hanuman].png" alt="image " /></a>
-                                <a id="1686" ng-click="setSelectedCardID(1686);" href="#">
+                                <a id="1686" ng-click="setSelectedCardID(1686, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Refess/Cait-Sith.png" alt="image " /></a>
-                                <a id="1687" ng-click="setSelectedCardID(1687);" href="#">
+                                <a id="1687" ng-click="setSelectedCardID(1687, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Refess/Phoenix.png" alt="image " /></a>
                             </div>
 
                             <div ng-show="Sphere == 'Falkow'">
-                                <a id="165" ng-click="setSelectedCardID(165);" href="#">
+                                <a id="165" ng-click="setSelectedCardID(165, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Falkow/Witch.png" alt="image " /></a>
-                                <a id="161" ng-click="setSelectedCardID(161);" href="#">
+                                <a id="161" ng-click="setSelectedCardID(161, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Falkow/Eagle-Soldier.png" alt="image " /></a>
-                                <a id="1712" ng-click="setSelectedCardID(1712);" href="#">
+                                <a id="1712" ng-click="setSelectedCardID(1712, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Falkow/Deep-Squid.png" alt="image " /></a>
-                                <a id="1713" ng-click="setSelectedCardID(1713);" href="#">
+                                <a id="1713" ng-click="setSelectedCardID(1713, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Falkow/Giant-Manta-Ray.png" alt="image " /></a>
-                                <a id="1714" ng-click="setSelectedCardID(1714);" href="#">
+                                <a id="1714" ng-click="setSelectedCardID(1714, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Falkow/Leviathan.png" alt="image " /></a>
                             </div>
                             <div ng-show="Sphere == 'Lawtia'">
                                 <!-- TODO: This should be pulled from the API, not hardcoded -->
-                                <a id="1693" ng-click="setSelectedCardID(1693);" href="#">
+                                <a id="1693" ng-click="setSelectedCardID(1693, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Lawtia/Magic-Doll--Mini-.png" alt="image " /></a>
-                                <a id="1694" ng-click="setSelectedCardID(1694);" href="#">
+                                <a id="1694" ng-click="setSelectedCardID(1694, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Lawtia/Magic-Doll--Melee-.png" alt="image " /></a>
-                                <a id="119" ng-click="setSelectedCardID(119);" href="#">
+                                <a id="119" ng-click="setSelectedCardID(119, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Lawtia/Assassin.png" alt="image " /></a>
-                                <a id="121" ng-click="setSelectedCardID(121);" href="#">
+                                <a id="121" ng-click="setSelectedCardID(121, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Lawtia/Mad-Priest.png" alt="image " /></a>
-                                <a id="128" ng-click="setSelectedCardID(128);" href="#">
+                                <a id="128" ng-click="setSelectedCardID(128, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Lawtia/Skeleton-Master.png" alt="image " /></a>
                             </div>
                             <div ng-show="Sphere == 'Gowen'">
-                                <a id="390" ng-click="setSelectedCardID(390);" href="#">
+                                <a id="390" ng-click="setSelectedCardID(390, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Gowen/Dryad-Soldier.png" alt="image " /></a>
-                                <a id="1706" ng-click="setSelectedCardID(1706);" href="#">
+                                <a id="1706" ng-click="setSelectedCardID(1706, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Gowen/Volcano-Wyvern.png" alt="image " /></a>
-                                <a id="1707" ng-click="setSelectedCardID(1707);" href="#">
+                                <a id="1707" ng-click="setSelectedCardID(1707, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Gowen/Heierrat-Dual-Gunslinger.png" alt="image " /></a>
-                                <a id="394" ng-click="setSelectedCardID(394);" href="#">
+                                <a id="394" ng-click="setSelectedCardID(394, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Gowen/Gaia-Anaconda.png" alt="image " /></a>
-                                <a id="392" ng-click="setSelectedCardID(392);" href="#">
+                                <a id="392" ng-click="setSelectedCardID(392, 'Soul');" href="#">
                                     <img src="/Content/images/starter files/Gowen/Giant-Ork.png" alt="image " /></a>
                             </div>
                         </div>

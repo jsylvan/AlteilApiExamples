@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/AlteilAPIExamples.dll">
-      <publishTime>05/04/2013 10:17:14</publishTime>
+      <publishTime>05/08/2013 20:38:46</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>04/06/2013 20:13:45</publishTime>
@@ -153,6 +153,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/images/CardSpriteSheet.png">
       <publishTime>04/06/2013 15:52:03</publishTime>
+    </File>
+    <File Include="Content/images/counter.png">
+      <publishTime>05/08/2013 20:21:33</publishTime>
     </File>
     <File Include="Content/images/detail-bg1.png">
       <publishTime>04/06/2013 14:50:32</publishTime>
@@ -421,6 +424,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/images/tableBottomRepeater.png">
       <publishTime>04/29/2013 13:50:35</publishTime>
     </File>
+    <File Include="Content/images/trait.png">
+      <publishTime>05/08/2013 20:23:22</publishTime>
+    </File>
     <File Include="Content/images/viewfullcardlist.png">
       <publishTime>05/02/2013 12:01:13</publishTime>
     </File>
@@ -434,7 +440,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/07/2013 15:03:16</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>05/02/2013 14:54:45</publishTime>
+      <publishTime>05/08/2013 20:32:28</publishTime>
     </File>
     <File Include="Content/spinner.gif">
       <publishTime>04/07/2013 15:03:16</publishTime>
@@ -701,10 +707,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/02/2013 12:46:12</publishTime>
     </File>
     <File Include="Scripts/Card/CardApp.js">
-      <publishTime>04/30/2013 19:36:00</publishTime>
+      <publishTime>05/08/2013 19:40:54</publishTime>
     </File>
     <File Include="Scripts/Card/CardFileApp.js">
-      <publishTime>05/03/2013 19:14:57</publishTime>
+      <publishTime>05/08/2013 19:38:30</publishTime>
     </File>
     <File Include="Scripts/i18n/angular-locale_am-et.js">
       <publishTime>04/06/2013 11:26:49</publishTime>
@@ -1241,10 +1247,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/05/2013 19:01:11</publishTime>
     </File>
     <File Include="Views/Card/File.aspx">
-      <publishTime>05/04/2013 10:11:22</publishTime>
+      <publishTime>05/08/2013 19:36:48</publishTime>
     </File>
     <File Include="Views/Card/index.aspx">
-      <publishTime>05/03/2013 18:02:19</publishTime>
+      <publishTime>05/08/2013 20:33:13</publishTime>
     </File>
     <File Include="Views/Card/Starters.aspx">
       <publishTime>05/05/2013 18:50:44</publishTime>
@@ -1259,7 +1265,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/06/2013 11:07:11</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/08/2013 14:14:02</publishTime>
+      <publishTime>05/08/2013 20:38:47</publishTime>
     </File>
   </ItemGroup>
 </Project>

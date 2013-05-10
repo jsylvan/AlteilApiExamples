@@ -10,7 +10,7 @@ CardController = function ($scope, $resource) {
         DF: 'Defense protects a unit from some of the damage from most attacks.',
         AGI: 'Agility is the unit\'s speed. Units with higher agility go first.',
         RNG: 'A unit can attack over the head of one unit per point of Range over 1. Only occupied rows count against range.',
-        LP: 'Life Points are used if this card is one of your 5 Soul Cards. Each of your Soul Cards\' LP must be depleted by the enemy before you can be harmed.',
+        LP: 'Life Points are used if this card is one of your 5 Soul Cards. Add all your soul cards\' LP together to get your personal Life Points. If they reach zero, you lose.',
         battle_time: 'Some units gain bonuses at different times of day or night.',
         SP: 'Spell Points are your basic resource. You spend them to summon units or use special abilities.',
         engage: 'Units become engaged after taking their turn. Engaging an enemy unit forces it to lose a turn.',
@@ -79,7 +79,21 @@ CardController = function ($scope, $resource) {
         this.Loading = "loading";
         this.card = this.Activity.get({
             cardID: id
-        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); $scope.Rarity = [1, 2, 3, 4]; });
+        }, function () { me.Loading = ""; me.Skills = $scope.getSkills(); $scope.Rarity = $scope.getRarity(); });
+
+    };
+    
+    $scope.getRarity = function () {
+        var rarityArray = [];
+        if ($scope.card) {
+            var stars = ($scope.card.CardSetRarity.split("★").length - 1);
+            for (i = 0; i < stars; i++) {
+                rarityArray.push("★");
+            }
+        }
+        return rarityArray;
+        
+
 
     };
 
@@ -92,6 +106,7 @@ CardController = function ($scope, $resource) {
           this.card.Skills.Skill1,
           this.card.Skills.Skill2,
           this.card.Skills.Skill3,
+          this.card.Skills.RankUp,
         this.card.Skills.Soul];
     };
 
@@ -113,6 +128,13 @@ CardController = function ($scope, $resource) {
     }   
     $scope.strID = getQueryVariable("id");
     $scope.loadCard($scope.strID);
+
+    $scope.PlayCardStyle = '';
+    $scope.SoulCardStyle = 'notActive';
+    if (getQueryVariable("area") == 'Soul') {
+        $scope.PlayCardStyle = 'notActive';
+        $scope.SoulCardStyle = '';
+    }
     
 };
 ;

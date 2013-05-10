@@ -311,6 +311,24 @@ Card type is 16 px Times Roman
     background-position: -303px -5px;
 }
 
+.cardSprite-Skill-Counter {
+    width: 69px;
+    height: 18px;
+    background: url(/Content/Images/Counter.png) repeat-x;
+}
+
+.cardSprite-Skill- {
+    width: 69px;
+    height: 18px;
+    background: url(/Content/Images/trait.png) repeat-x;    
+}
+
+.cardSprite-Skill-Trait {
+    width: 69px;
+    height: 18px;
+    background: url(/Content/Images/trait.png) repeat-x;
+}
+
 .cardSprite-numberSphere-Gowen {
     width: 65px;
     height: 64px;
