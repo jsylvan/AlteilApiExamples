@@ -21,9 +21,8 @@
     <title>Browse Cards</title>
 </head>
 <body>
-    <div class="iframeHack" />
-
-    <center>    
+    <div class="iframeHack" />    
+        <center>    
         <div class="browseWrapper">          
             <div class="row-fluid">
                 <div class="span6">
@@ -59,11 +58,11 @@
         <div class="spacer"></div>
         <a href="http://www.alteil.com/index.php/card-list" target="_blank">
             <img src="/Content/images/viewfullcardlist.png" /></a>
-    </center>
+    </center>    
     <!-- popup form #2 -->
     <a href="#x" class="overlay" id="join_form"></a>
     <div class="popup">
-        <iframe src="/Card?id={{selectedCard.id}}" style="width: 800px; height: 600px;" frameborder="0"></iframe>
+        <iframe src="/Card?id={{selectedCard.id}}" style="width: 800px; height: 500px;" frameborder="0"></iframe>
 
         <a class="close" href="#close"></a>
     </div>

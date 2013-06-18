@@ -51,7 +51,7 @@
         //Stop autoscrolling
         //Credit: http://stackoverflow.com/questions/10521165/bootstrap-javascript-carousel-doesnt-stop-cycling
         $(function() {
-            $('.myCarousel').each(function(){
+            $('.carousel').each(function(){
                 $(this).carousel({
                     interval: false
                 });

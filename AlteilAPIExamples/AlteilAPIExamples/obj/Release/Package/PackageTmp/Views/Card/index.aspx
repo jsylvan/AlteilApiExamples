@@ -24,7 +24,7 @@
 <body class="{{Loading}}" style="overflow: hidden">    
     <div id="main" class="cardSkinWrapper" ng-show="card.Name">
         <div class="cardQuickGlanceWrapper">
-            <img ng-src="{{card.ImageURL}}" title="{{card.FlavorText.Text2}}" />
+            <img ng-src="{{card.ImageURL}}" title="{{card.FlavorText.Text2}}" class="bottomtooltip" />
             <div class="cardRarity">
                 Rarity
             </div>
@@ -128,11 +128,11 @@
                 </div>
                 <div class="cardTypeText cardTypePosition">
                     <div class="" style="text-align: right;"><span title="{{getToolTip(card.MultiSphere)}}">{{card.MultiSphere}} </span><span title="{{ToolTips.CardType}}">Card Type</span>: <span title="{{getToolTip(card.SubType1)}}">{{card.SubType1}}</span> <span ng-show='card.SubType2 && card.SubType1'> / </span><span title="{{getToolTip(card.SubType2)}}">{{card.SubType2}}</span> </div>
-                    <div class="" style="text-align: right; line-height: 10px; padding-bottom: 9px;"><span title="{{getToolTip(card.CardType)}}">{{card.CardType}}</span><span title="{{getToolTip(card.UnitType)}}" ng-hide="card.CardType == 'Grimoire' || card.UnitType != 'Character'">: {{card.UnitType}}</span></div>
+                    <div class="" style="text-align: right; line-height: 10px; padding-bottom: 9px;"><span title="{{getToolTip(card.CardType)}}" ng-hide="card.UnitType == 'Character'">{{card.CardType}}</span><span title="{{getToolTip(card.UnitType)}}" ng-hide="card.CardType == 'Grimoire' || card.UnitType != 'Character'"> {{card.UnitType}}</span></div>
                 </div>
             </div>
 
-            <div title="{{ToolTips.LV}}" class="cardSprite cardSprite-numberSphere-{{card.Sphere}}" style="float: left; margin-left: -410px; margin-top: -10px;">
+            <div title="{{ToolTips.LV}}" class="cardSprite cardSprite-numberSphere-{{card.Sphere}}" style="float: left; margin-left: -410px; margin-top: -10px;z-index:3;">
                 <div class="sphereBigText">{{card.BaseStats.Level}}</div>
                 <div class="sphereSmallText">
                     LV.
@@ -151,7 +151,7 @@
                             <div class="skillBoxRightCap" >
 
                                 <div class="cardSkillSP" data-original-title="{{ToolTips.SP}}" style="background-color: black; float: right; height: 16px; overflow: hidden; margin-right: 30px; margin-top: 0px;">
-                                    <img src="/Content/images/sp.gif" alt="SP" style="margin-top: -2px;" />
+                                    <img src="/Content/images/SP-mark.png" alt="SP" style="margin-top: -2px;" />
                                     SP <span style="">{{skill.SP}}
                                     </span>
                                 </div>
@@ -160,7 +160,11 @@
                         <div class="cardSkillComment skillTableWidth">
                             {{skill.Comment}}
                         </div>
-                        <script>
+                        <script>       
+                            $('.bottomtooltip').tooltip(
+                            {
+                                placement: 'bottom'
+                            });
                             $('*').tooltip();
                         </script>
                     </div>
@@ -175,7 +179,6 @@
         <a id="cardLoader" ng-click="loadCard(strID)">Load card #{{strID}}</a>
     </div>
     <script>
-        $('*').tooltip();
 
     </script>
 </html>
