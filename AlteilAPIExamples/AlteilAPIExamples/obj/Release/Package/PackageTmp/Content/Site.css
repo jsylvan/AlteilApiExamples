@@ -20,22 +20,22 @@ h4 {
 }
 
 .skillBoxRightCap {
-    float: right;
-    padding-right: 3px;
+    float: right;    
     padding-top: 2px;
+    padding-right:16px
 }
 
 .notActive {
     /* IE 8 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
     /* IE 5-7 */
-    filter: alpha(opacity=50);
+    filter: alpha(opacity=20);
     /* Netscape */
-    -moz-opacity: 0.5;
+    -moz-opacity: 0.2;
     /* Safari 1.x */
-    -khtml-opacity: 0.5;
+    -khtml-opacity: 0.2;
     /* Good browsers */
-    opacity: 0.5;
+    opacity: 0.2;
 }
 /*
     Overall wrapper around entire card data. In this case, it shows a scroll

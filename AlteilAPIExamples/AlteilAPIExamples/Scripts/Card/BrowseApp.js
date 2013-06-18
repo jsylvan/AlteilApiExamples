@@ -67,7 +67,7 @@ BrowseController = function ($scope, $resource) {
             Name: 'Dragon-of-the-Mercurial-Night'
         },
         {
-            id: 215,
+            id: 324,
             Name: 'Novice-Assassin'
         },
         {

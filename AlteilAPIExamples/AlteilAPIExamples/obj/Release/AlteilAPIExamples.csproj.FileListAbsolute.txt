@@ -33,7 +33,6 @@ X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIEx
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\Antlr3.Runtime.dll
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\EntityFramework.dll
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\Microsoft.Web.Infrastructure.dll
-X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\Newtonsoft.Json.dll
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\System.Net.Http.Formatting.dll
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\System.Web.Http.dll
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\System.Web.Http.WebHost.dll
@@ -46,7 +45,6 @@ X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIEx
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\System.Web.WebPages.Razor.dll
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\WebGrease.dll
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\EntityFramework.xml
-X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\Newtonsoft.Json.xml
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\System.Net.Http.Formatting.xml
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\System.Web.Http.xml
 X:\Users\diadem\Documents\GitHub\AlteilApiExamples\AlteilAPIExamples\AlteilAPIExamples\bin\System.Web.Http.WebHost.xml

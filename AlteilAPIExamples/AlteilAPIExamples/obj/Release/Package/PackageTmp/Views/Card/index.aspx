@@ -24,7 +24,7 @@
 <body class="{{Loading}}" style="overflow: hidden">    
     <div id="main" class="cardSkinWrapper" ng-show="card.Name">
         <div class="cardQuickGlanceWrapper">
-            <img ng-src="{{card.ImageURL}}" title="{{card.FlavorText.Text1}}" />
+            <img ng-src="{{card.ImageURL}}" title="{{card.FlavorText.Text2}}" />
             <div class="cardRarity">
                 Rarity
             </div>
@@ -148,7 +148,7 @@
                             <div class="cardSkillName glow" style="float: left; vertical-align: middle; text-transform: uppercase; padding-left: 6px; padding-top: 2px;">
                                 {{skill.Name}}           
                             </div>
-                            <div class="skillBoxRightCap">
+                            <div class="skillBoxRightCap" >
 
                                 <div class="cardSkillSP" data-original-title="{{ToolTips.SP}}" style="background-color: black; float: right; height: 16px; overflow: hidden; margin-right: 30px; margin-top: 0px;">
                                     <img src="/Content/images/sp.gif" alt="SP" style="margin-top: -2px;" />
@@ -165,10 +165,7 @@
                         </script>
                     </div>
                 </div>
-                <div class="cardFlavorText">
-                    {{card.FlavorText.Text2}}
-                </div>
-
+                
             </div>
         </div>
     </div>
